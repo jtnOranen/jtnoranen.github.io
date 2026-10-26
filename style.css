@@ -1,242 +1,572 @@
-/* Basic typography styles */
-.space-grotesk-header {
-    font-family: "Space Grotesk", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+/* Värit, typografia ja mitat. Tumma tila seuraa käyttöjärjestelmän asetusta. */
+:root {
+    color-scheme: light dark;
+
+    --tausta: #ffffff;
+    --pinta: #f2f6f5;
+    --teksti: #021c1e;
+    --toissijainen: #56686a;
+    --viiva: #d9e3e2;
+    --korostus: #2c7873;
+    --korostus-vahva: #004445;
+    --korostuksella: #ffffff;
+    --muste: #021c1e;
+
+    --fontti: "Space Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --koko-pieni: clamp(0.875rem, 0.84rem + 0.15vw, 0.9375rem);
+    --koko-perus: clamp(1.0625rem, 1.03rem + 0.15vw, 1.125rem);
+    --koko-iso: clamp(1.1875rem, 1.1rem + 0.4vw, 1.375rem);
+    --koko-otsikko: clamp(1.5rem, 1.35rem + 0.6vw, 1.875rem);
+    --koko-nimi: clamp(2.75rem, 1.5rem + 3.6vw, 5.5rem);
+
+    --leveys: 64rem;
+    --palsta: 42rem;
+    --reunus: clamp(1rem, 4vw, 2rem);
+    --ylapalkin-korkeus: 0rem;
 }
 
-.open-sans-text {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --tausta: #021c1e;
+        --pinta: #0a2a2c;
+        --teksti: #e4eeed;
+        --toissijainen: #9db3b1;
+        --viiva: #1c3e40;
+        --korostus: #6cc1ba;
+        --korostus-vahva: #9ad6d0;
+        --korostuksella: #021c1e;
+    }
 }
 
-/* Global styles */
+/* Perustyylit */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
 body {
-    background-color: #ffffff;
-    padding: 0;
     margin: 0;
-    font-family: "Open Sans", sans-serif;
+    background: var(--tausta);
+    color: var(--teksti);
+    font-family: var(--fontti);
+    font-size: var(--koko-perus);
+    line-height: 1.6;
 }
 
-.sivuston_ylalaita {
-    font-size: 40px;
-    background-image: linear-gradient(90deg, #004445 0%, #2C7873 50%, white 120%);
-    background-color: #004445;
-    color: white;
-    font-family: "Space Grotesk", sans-serif;
-    box-shadow: 0 4px 3cap rgba(0, 0, 0, 0.1);
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+dl,
+dd {
+    margin: 0;
 }
 
-.responsive-image {
-    width: 100%;
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+    line-height: 1.2;
+    text-wrap: balance;
+}
+
+p,
+li {
+    text-wrap: pretty;
+}
+
+img {
+    display: block;
+    max-width: 100%;
     height: auto;
 }
 
-
-
-/* Navigation bar */
-.navigaationauha {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 1000;
+a {
+    color: var(--korostus);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
 }
 
-.navigaationauha ul {
-    list-style-type: none;
-    padding: 1px;
-    margin: 1px;
-    text-align: center;
+a:hover {
+    color: var(--korostus-vahva);
+    text-decoration-thickness: 2px;
 }
 
-.navigaationauha li {
-    display: inline;
-    margin-right: 20px;
+:focus-visible {
+    outline: 3px solid var(--korostus);
+    outline-offset: 3px;
 }
 
-.navigaationauha a {
+[id] {
+    scroll-margin-top: calc(var(--ylapalkin-korkeus) + 1rem);
+}
+
+.ohituslinkki {
+    position: absolute;
+    top: -4rem;
+    left: var(--reunus);
+    z-index: 20;
+    padding: 0.5rem 0.875rem;
+    border-radius: 0.375rem;
+    background: var(--korostus);
+    color: var(--korostuksella);
+    font-weight: 600;
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-family: "Space Grotesk", sans-serif;
 }
 
-/* Section title */
-.otsikko {
-    width: 100%;
-    font-size: 40px;
-    color: white;
-    text-align: center;
-
-    background-color: #2C7873;
-    font-family: "Space Grotesk", sans-serif;
+.ohituslinkki:focus {
+    top: 0.5rem;
 }
 
-h2 {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 36px;
-    color: #004445;
-    margin: 20px 0;
-    text-align: center;
+/* Yläpalkki ja navigaatio */
+.ylapalkki {
+    border-bottom: 1px solid var(--viiva);
+    background: var(--tausta);
 }
 
-h3 {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 28px;
-    color: #2C7873;
-    margin: 20px 0;
-    text-align: center;
-}
-
-/* Button row container */
-.row {
+.ylapalkki__sisus {
     display: flex;
-    justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.375rem 2rem;
+    max-width: var(--leveys);
+    margin-inline: auto;
+    padding: 0.75rem var(--reunus);
 }
 
-/* Column styling for buttons */
-.column {
-    flex: 1;
-    max-width: 200px;
-    text-align: center;
-}
-
-/* Button styling */
-.button {
-    display: inline-block;
-    padding: 25px 10px;
-    background-color: #004445;
-    color: white;
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 20px;
+.ylapalkki__nimi {
+    color: var(--teksti);
+    font-weight: 600;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 300px;
-    text-align: center;
 }
 
-/* Button hover effect */
-.button:hover {
-    background-color: #021C1E;
+.ylapalkki__nimi:hover {
+    color: var(--teksti);
 }
 
-/* Main content styles */
-.sisalto {
+.navigaatio ul {
     display: flex;
-    /* Makes .sisalto a flex container */
-    flex-direction: column;
-    /* Stacks child elements vertically */
-    align-items: center;
-    /* Centers child elements horizontally */
-    justify-content: flex-start;
-    /* Aligns items at the top */
-
-    width: 100%;
-    max-width: 800px;
-    /* Controls the maximum width for the content */
-    padding: 10px;
-    margin: 0 auto 40px auto;
-
-    text-align: left;
-    color: #004445;
-    font-size: 20px;
-    background-color: #ffffff;
-    font-family: "Open Sans", sans-serif;
-}
-
-/* Footer */
-.sivuston_alalaita {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #2C7873;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.sivuston_alalaita ul {
-    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
     padding: 0;
-    margin: 0;
+    list-style: none;
+    font-size: var(--koko-pieni);
+}
+
+.navigaatio a {
+    color: var(--toissijainen);
+    text-decoration: none;
+}
+
+.navigaatio a:hover {
+    color: var(--teksti);
+    text-decoration: underline;
+}
+
+@media (min-width: 40rem) {
+    :root {
+        --ylapalkin-korkeus: 3.5rem;
+    }
+
+    .ylapalkki {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+}
+
+/* Hero: kapealla näytöllä kuva ja teksti allekkain, leveällä teksti kuvan päällä */
+.hero {
+    max-width: 100rem;
+    margin-inline: auto;
+    background: var(--muste);
+}
+
+.hero__kuva picture {
+    display: block;
+}
+
+.hero__kuva img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.hero__teksti {
+    padding: 2rem var(--reunus) clamp(2.5rem, 7vw, 4rem);
+    background: var(--tausta);
+}
+
+.hero h1 {
+    font-size: var(--koko-nimi);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+.hero__rooli {
+    margin-top: 1rem;
+    font-size: var(--koko-iso);
+    font-weight: 500;
+}
+
+.hero__motto {
+    margin-top: 0.25rem;
+    color: var(--toissijainen);
+}
+
+.hero .napit {
+    margin-top: 1.75rem;
+}
+
+@media (min-width: 56rem) {
+    .hero {
+        display: grid;
+        grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+        height: clamp(28rem, 72vh, 40rem);
+        overflow: hidden;
+    }
+
+    .hero > * {
+        grid-area: 1 / 1;
+    }
+
+    .hero__kuva {
+        position: relative;
+    }
+
+    .hero__kuva picture,
+    .hero__kuva img {
+        height: 100%;
+    }
+
+    .hero__kuva img {
+        aspect-ratio: auto;
+        object-position: 65% 0%;
+    }
+
+    .hero__kuva::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            90deg,
+            rgb(2 28 30 / 0.92) 0%,
+            rgb(2 28 30 / 0.82) 35%,
+            rgb(2 28 30 / 0.35) 48%,
+            rgb(2 28 30 / 0) 60%
+        );
+    }
+
+    .hero__teksti {
+        position: relative;
+        align-self: center;
+        padding-block: 3rem;
+        padding-inline: max(var(--reunus), calc((100% - var(--leveys)) / 2 + var(--reunus)));
+        background: none;
+        color: #ffffff;
+    }
+
+    .hero__motto {
+        color: rgb(255 255 255 / 0.85);
+    }
+
+    .hero .nappi--toissijainen,
+    .hero .nappi--toissijainen:hover {
+        border-color: rgb(255 255 255 / 0.8);
+        color: #ffffff;
+    }
+
+    .hero .nappi--toissijainen:hover {
+        border-color: #ffffff;
+        background: rgb(255 255 255 / 0.12);
+    }
+
+    .hero :focus-visible {
+        outline-color: #ffffff;
+    }
+}
+
+/* Napit */
+.napit {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.nappi {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-}
-
-.sivuston_alalaita li {
-    display: inline;
-}
-
-.sivuston_alalaita a {
+    min-height: 2.75rem;
+    padding: 0.5rem 1.125rem;
+    border: 2px solid var(--korostus);
+    border-radius: 0.375rem;
+    font-weight: 600;
+    line-height: 1.2;
     text-decoration: none;
-    color: white;
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 18px;
 }
 
-/* Media queries for responsive design */
-@media screen and (max-width: 600px) {
-    .row {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+.nappi--ensisijainen {
+    background: var(--korostus);
+    color: var(--korostuksella);
+}
+
+.nappi--ensisijainen:hover {
+    border-color: var(--korostus-vahva);
+    background: var(--korostus-vahva);
+    color: var(--korostuksella);
+}
+
+.nappi--toissijainen {
+    color: var(--korostus);
+}
+
+.nappi--toissijainen:hover {
+    border-color: var(--korostus-vahva);
+    color: var(--korostus-vahva);
+}
+
+/* Osiot: leveällä näytöllä otsikko vasemmassa palstassa, sisältö oikeassa */
+.osio {
+    max-width: var(--leveys);
+    margin-inline: auto;
+    padding: clamp(2.5rem, 7vw, 4.5rem) var(--reunus);
+    border-top: 1px solid var(--viiva);
+}
+
+.hero + .osio {
+    border-top: 0;
+}
+
+.osio > h2 {
+    margin-bottom: 1.5rem;
+    font-size: var(--koko-otsikko);
+    letter-spacing: -0.01em;
+}
+
+.osio__sisalto {
+    max-width: var(--palsta);
+}
+
+.osio__sisalto > * + * {
+    margin-top: 1.25rem;
+}
+
+.osio__sisalto > h3 {
+    margin-top: 3rem;
+    color: var(--toissijainen);
+    font-size: var(--koko-perus);
+}
+
+.osio__sisalto > h3:first-child {
+    margin-top: 0;
+}
+
+.osio__sisalto > h3 + * {
+    margin-top: 1rem;
+}
+
+@media (min-width: 56rem) {
+    .osio {
+        display: grid;
+        grid-template-columns: 14rem minmax(0, var(--palsta));
+        column-gap: 3rem;
+        align-items: start;
     }
 
-    .column {
-        width: 100%;
-    }
-
-    .button {
-        width: 100%;
-        max-width: 300px;
-        padding: 15px;
-    }
-
-
-    .navigaationauha a {
-        font-size: 24px;
-        /* Increase font size on smaller screens */
-    }
-
-    .navigaationauha li {
-        margin-right: 10px;
-        /* Reduce margin between items for better fit */
-    }
-
-    .sivuston_alalaita a {
-        font-size: 24px;
-        /* Increase font size on smaller screens */
-    }
-
-    .sivuston_alalaita {
-        padding: 15px 0;
-        /* Adjust padding for better spacing on smaller screens */
+    .osio > h2 {
+        margin-bottom: 0;
     }
 }
 
-
-/*Linkit*/
-.links {
-    text-decoration: none;
-    color: #021C1E;
-    /* You can replace 'inherit' with a specific color code */
+.johdanto {
+    font-size: var(--koko-iso);
+    line-height: 1.5;
 }
 
-.divider {
-    align-self: center;
-    /* Centers the divider horizontally */
-    width: 120%;
-    /* Sets the divider width to 90% of its parent */
-    border-top: 1px solid #2C6E49;
-    margin: 20px 0;
-    /* Adds vertical spacing */
-    opacity: 0.5;
+/* Projektit */
+.projekti h4 {
+    font-size: var(--koko-iso);
+}
+
+.projekti__vuosi {
+    margin-left: 0.375rem;
+    color: var(--toissijainen);
+    font-size: var(--koko-perus);
+    font-weight: 400;
+}
+
+.projekti p {
+    margin-top: 0.5rem;
+}
+
+.projekti__tiedot {
+    color: var(--toissijainen);
+    font-size: var(--koko-pieni);
+}
+
+.osio__sisalto > .projekti + .projekti {
+    margin-top: 2.25rem;
+}
+
+/* Aikajana. Työhistorian yläpään katkoviiva kertoo, että nykyinen työ jatkuu. */
+.aikajana {
+    padding: 0;
+    list-style: none;
+}
+
+.aikajana > li {
+    position: relative;
+    padding: 0 0 2rem 2rem;
+}
+
+.aikajana > li:last-child {
+    padding-bottom: 0;
+}
+
+.aikajana > li::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    bottom: -0.5rem;
+    left: calc(0.375rem - 1px);
+    border-left: 2px solid var(--viiva);
+}
+
+.aikajana > li:last-child::before {
+    display: none;
+}
+
+.aikajana > li::after {
+    content: "";
+    position: absolute;
+    top: 0.4rem;
+    left: 0;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 2px solid var(--korostus);
+    border-radius: 50%;
+    background: var(--tausta);
+}
+
+.aikajana > li.nyt::after {
+    background: var(--korostus);
+}
+
+.aikajana--jatkuu {
+    position: relative;
+    padding-top: 1.75rem;
+}
+
+.aikajana--jatkuu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(0.375rem - 1px);
+    height: 2.15rem;
+    border-left: 2px dashed var(--korostus);
+}
+
+.aikajana__aika {
+    color: var(--toissijainen);
+    font-size: var(--koko-pieni);
+}
+
+.aikajana h4 {
+    margin-top: 0.125rem;
+    font-size: var(--koko-iso);
+}
+
+.aikajana h4 + p {
+    margin-top: 0.375rem;
+}
+
+/* Avattavat lisätiedot */
+.lisaa {
+    padding-top: 1rem;
+    border-top: 1px solid var(--viiva);
+}
+
+.aikajana + .lisaa {
+    margin-top: 2rem;
+}
+
+.osio__sisalto > .lisaa + .lisaa {
+    margin-top: 0;
+}
+
+.lisaa summary {
+    width: fit-content;
+    color: var(--korostus);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.lisaa summary:hover {
+    color: var(--korostus-vahva);
+}
+
+.lisaa[open] {
+    padding-bottom: 1rem;
+}
+
+.lisaa .lista {
+    margin-top: 1rem;
+}
+
+.lista {
+    display: grid;
+    gap: 0.875rem;
+    padding: 0;
+    list-style: none;
+}
+
+.lista strong {
+    font-weight: 600;
+}
+
+/* Englanninkielinen tiivistelmä */
+.englanniksi .osio__sisalto {
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border-radius: 0.5rem;
+    background: var(--pinta);
+}
+
+/* Alapalkki */
+.yhteystiedot {
+    display: grid;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+    font-size: var(--koko-iso);
+}
+
+.alapalkki__huomautus {
+    color: var(--toissijainen);
+    font-size: var(--koko-pieni);
+}
+
+.osio__sisalto > .alapalkki__huomautus {
+    margin-top: 2.5rem;
 }

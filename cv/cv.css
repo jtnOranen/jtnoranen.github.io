@@ -1,0 +1,198 @@
+/* CV-sivujen tyyli. Sivut ovat cv_Suomi.pdf:n ja cv_English.pdf:n lähteitä (ks. tools/build_cv_pdfs.py). */
+:root {
+    color-scheme: light;
+
+    --teksti: #021c1e;
+    --toissijainen: #56686a;
+    --viiva: #d9e3e2;
+    --korostus: #2c7873;
+    --fontti: "Space Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@page {
+    size: A4;
+    margin: 12mm 14mm;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background: #e9efee;
+}
+
+body {
+    margin: 0;
+    color: var(--teksti);
+    font-family: var(--fontti);
+    font-size: 9pt;
+    line-height: 1.42;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+dd {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.paperi {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 10mm auto;
+    padding: 12mm 14mm;
+    background: #ffffff;
+    box-shadow: 0 1px 4px rgb(2 28 30 / 0.15);
+}
+
+@media print {
+    html {
+        background: none;
+    }
+
+    .paperi {
+        width: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+}
+
+/* Otsikko-osa */
+.cv-otsikko {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8mm;
+    align-items: start;
+    padding-bottom: 5mm;
+    border-bottom: 2px solid var(--korostus);
+}
+
+.cv-otsikko h1 {
+    font-size: 24pt;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.titteli {
+    margin-top: 1.5mm;
+    color: var(--korostus);
+    font-size: 12pt;
+    font-weight: 500;
+}
+
+.profiili {
+    max-width: 125mm;
+    margin-top: 3.5mm;
+    font-size: 10pt;
+}
+
+.yhteys {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1mm 5mm;
+    margin-top: 3.5mm;
+    padding: 0;
+    list-style: none;
+    color: var(--toissijainen);
+}
+
+.kuva {
+    width: 30mm;
+    height: 30mm;
+    border-radius: 2mm;
+    object-fit: cover;
+}
+
+/* Runko: pääpalsta ja sivupalsta */
+.runko {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 54mm;
+    gap: 9mm;
+    margin-top: 6mm;
+}
+
+.osa + .osa {
+    margin-top: 6mm;
+}
+
+.osa h2 {
+    margin-bottom: 3mm;
+    color: var(--korostus);
+    font-size: 11pt;
+}
+
+.merkinta {
+    display: grid;
+    grid-template-columns: 25mm minmax(0, 1fr);
+    column-gap: 4mm;
+}
+
+.merkinta + .merkinta {
+    margin-top: 3.5mm;
+}
+
+.merkinta__aika {
+    grid-row: span 2;
+    color: var(--toissijainen);
+    font-variant-numeric: tabular-nums;
+}
+
+.merkinta h3 {
+    font-size: 10pt;
+}
+
+.merkinta h3 ~ p {
+    grid-column: 2;
+    margin-top: 0.75mm;
+}
+
+.lista strong {
+    font-weight: 600;
+}
+
+.kielet {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1mm 3mm;
+}
+
+.kielet dt {
+    font-weight: 600;
+}
+
+.lista {
+    display: grid;
+    gap: 2mm;
+    padding: 0;
+    list-style: none;
+}
+
+.lista strong {
+    display: block;
+}
+
+.lista--rivit strong {
+    display: inline;
+}

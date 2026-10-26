@@ -3,91 +3,294 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tervetuloa Joel Orasen henkilökohtaisille sivuille. Osaaminen, CV, Portfolio">
-    <title>Oranen</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joel Oranen – Data engineer</title>
+    <meta name="description" content="Joel Oranen on data engineer, jolla on tausta kauppatieteissä ja strategisessa ennakoinnissa. Projektit, työkokemus ja CV.">
+    <link rel="canonical" href="https://jtnoranen.github.io/">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#021c1e" media="(prefers-color-scheme: dark)">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:locale" content="fi_FI">
+    <meta property="og:site_name" content="Joel Oranen">
+    <meta property="og:title" content="Joel Oranen – Data engineer">
+    <meta property="og:description" content="Data engineer, jolla on tausta kauppatieteissä ja strategisessa ennakoinnissa. Projektit, työkokemus ja CV.">
+    <meta property="og:url" content="https://jtnoranen.github.io/">
+    <meta property="og:image" content="https://jtnoranen.github.io/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Joel Oranen">
+    <meta property="profile:first_name" content="Joel">
+    <meta property="profile:last_name" content="Oranen">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Joel Oranen",
+        "jobTitle": "Data Engineer",
+        "worksFor": { "@type": "Organization", "name": "Cloud2" },
+        "url": "https://jtnoranen.github.io/",
+        "image": "https://jtnoranen.github.io/img/joel-oranen.jpg",
+        "email": "mailto:joel.oranen@gmail.com",
+        "sameAs": [
+            "https://www.linkedin.com/in/joeloranen/",
+            "https://github.com/jtnOranen"
+        ]
+    }
+    </script>
 </head>
 
 <body>
+    <a class="ohituslinkki" href="#sisalto">Siirry sisältöön</a>
 
-    <div class="sivuston_ylalaita">
-        <div id="nimi">Joel Oranen</div>
-        <div id="motto">Tehdään datalla tulevaisuutta</div>
-    </div>
+    <header class="ylapalkki">
+        <div class="ylapalkki__sisus">
+            <a class="ylapalkki__nimi" href="#sisalto">Joel Oranen</a>
+            <nav class="navigaatio" aria-label="Sivun osiot">
+                <ul>
+                    <li><a href="#mina">Minä</a></li>
+                    <li><a href="#projektit">Projektit</a></li>
+                    <li><a href="#kokemus">Kokemus</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#in-english" lang="en">In English</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="navigaationauha">
-        <nav>
-            <ul>
-                <li><a href="index.html">MINÄ</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="portfolio.html">PORTFOLIO</a></li>
-            </ul>
-        </nav>
-    </div>
+    <main id="sisalto">
+        <section class="hero" aria-labelledby="hero-otsikko">
+            <div class="hero__kuva">
+                <picture>
+                    <source type="image/webp"
+                        srcset="img/joel-oranen-640.webp 640w, img/joel-oranen.webp 1260w"
+                        sizes="(min-width: 100rem) 100rem, 100vw">
+                    <img src="img/joel-oranen.jpg"
+                        srcset="img/joel-oranen-640.jpg 640w, img/joel-oranen.jpg 1260w"
+                        sizes="(min-width: 100rem) 100rem, 100vw"
+                        width="1260" height="840" fetchpriority="high"
+                        alt="Joel Oranen hymyilee sinisessä pikkutakissa.">
+                </picture>
+            </div>
+            <div class="hero__teksti">
+                <h1 id="hero-otsikko"><span>Joel</span> <span>Oranen</span></h1>
+                <p class="hero__rooli">Data engineer</p>
+                <p class="hero__motto">Tehdään datalla tulevaisuutta.</p>
+                <p class="napit">
+                    <a class="nappi nappi--ensisijainen" href="#projektit">Katso projektit</a>
+                    <a class="nappi nappi--toissijainen" href="cv_Suomi.pdf">Lataa CV (PDF)</a>
+                </p>
+            </div>
+        </section>
 
+        <section class="osio" id="mina" aria-labelledby="mina-otsikko">
+            <h2 id="mina-otsikko">Minä</h2>
+            <div class="osio__sisalto">
+                <p class="johdanto">Olen data engineer, jolla on tausta kauppatieteissä ja tulevaisuudentutkimuksessa.
+                    Yhdistän teknisen osaamisen ymmärrykseen siitä, mihin liiketoiminta dataa tarvitsee.</p>
+                <p>Työskentelen data engineerinä Cloud2:lla, jossa rakennan yritysasiakkaille data-alustoja ja
+                    dataputkia pilveen. Sitä ennen rakensin Skilliolla dataputkia ja raportointia Pythonilla ja
+                    Googlen pilvipalveluilla, ja KONEella kehitin yhtiön strategista ennakointia.</p>
+                <p>Tutuimmat työkaluni: Python, SQL, Azure, Databricks, dbt, Terraform, GitHub Actions, BigQuery,
+                    Microsoft Fabric ja Power BI.</p>
+                <p>Vapaa-ajallani pelaan jalkapalloa ja lautapelejä sekä boulderoin.</p>
+            </div>
+        </section>
 
-    <div class=div>
-        <img src="omakuvatest.jpg" alt="A portrait of Joel Oranen" class="responsive-image">
-    </div>
+        <section class="osio" id="projektit" aria-labelledby="projektit-otsikko">
+            <h2 id="projektit-otsikko">Projektit</h2>
+            <div class="osio__sisalto">
+                <h3>Dataprojektit</h3>
 
+                <article class="projekti">
+                    <h4>Energiadata-alusta <span class="projekti__vuosi">2026</span></h4>
+                    <p>Miten tuulivoima ja sää näkyvät Suomen sähkön vuorokausihinnassa? Rakensin vastausta varten
+                        kokonaisen data-alustan Azureen ja Databricksiin: datan haku kolmesta avoimesta rajapinnasta,
+                        lakehouse-kerrokset, dbt-mallinnus ja infrastruktuuri koodina. Tuuli selittää jopa kaksi
+                        viidesosaa hinnan vaihtelusta.</p>
+                    <p class="projekti__tiedot">Tekniikat: Terraform, Azure, Databricks, dbt ja GitHub Actions.
+                        <a href="https://github.com/jtnOranen/energy-data-platform">Lähdekoodi GitHubissa</a></p>
+                </article>
 
-    <div class="otsikko">Hei!</div>
+                <article class="projekti">
+                    <h4>Vedonlyöntikertoimet ja ottelutulokset <span class="projekti__vuosi">2025</span></h4>
+                    <p>Kuinka hyvin vedonvälittäjien kertoimet vastaavat jalkapallo-otteluiden todellisia tuloksia?
+                        ETL-harjoitusprojekti, jossa otteludata haetaan ja esikäsitellään, ladataan PostgreSQL:ään,
+                        siirretään BigQueryyn ja raportoidaan Power BI:ssä.</p>
+                    <p class="projekti__tiedot">Tekniikat: Python, PostgreSQL, BigQuery ja Power BI.
+                        <a href="https://github.com/jtnOranen/Bookies-odds-etl">Lähdekoodi GitHubissa</a></p>
+                </article>
 
+                <article class="projekti">
+                    <h4>Kasvimaan seuralaiskasvit <span class="projekti__vuosi">2025</span></h4>
+                    <p>Sovellus ehdottaa käyttäjän valitsemille vihanneksille paikat kasvimaan ruudukossa yksinkertaisen
+                        pisteytyksen perusteella.</p>
+                    <p class="projekti__tiedot">Tekniikat: Python ja Streamlit.
+                        <a href="https://github.com/jtnOranen/Plant_companions">Lähdekoodi GitHubissa</a></p>
+                </article>
 
+                <h3>Tutkimus ja ennakointi</h3>
 
+                <article class="projekti">
+                    <h4><a href="https://www.utupub.fi/handle/10024/174286">Pro gradu</a>
+                        <span class="projekti__vuosi">2023</span></h4>
+                    <p><cite lang="en">Pioneering spirit and village community of the future: Images of the future of
+                            church members of Jätkäsaari in the year 2040.</cite> Vedin Jätkäsaaren seurakunnan
+                        jäsenille työpajan, jossa hahmottelimme kaupunginosan toivottuja tulevaisuuskuvia sekä niitä
+                        tukevia ja uhkaavia trendejä.</p>
+                </article>
 
-    <div class="sisalto">
-        <h3>Tervetuloa!</h3>
-        <p>Olen Joel Oranen, tervetuloa nettisivuilleni. Nettisivut ovat ensimmäinen front end- koodausprojektini.
-            Sivuilla voit tutustua minuun, lukea tai ladata CV:ni tai tutustua portfoliooni.</p>
-        <h3>Welcome!</h3>
-        <p>SPEAK ENGLISH? Hi! I am Joel Oranen and you are witnessing my first front end- coding
-            project. If you'd like to get to know me, you can download my CV in English on the CV page.</p>
+                <article class="projekti">
+                    <h4>Ennakointiprojektit KONEella <span class="projekti__vuosi">2022–2024</span></h4>
+                    <p>Future of Living- ja Future of Mobility and Mobility Hubs -projektien haastattelut ja analyysit
+                        sekä ennakoinnin pelikirja strategia- ja innovaatiotiimeille. Pelikirja esittelee
+                        tulevaisuudentutkimuksen keskeiset menetelmät liiketoiminnan näkökulmasta.</p>
+                </article>
 
-        <h3>Kuka?</h3>
+                <article class="projekti">
+                    <h4>Kruunusiltojen systeemianalyysi</h4>
+                    <p>Lyhyt tutkimus siitä, miten Kruunusiltojen rakentaminen vaikuttaa Helsingin liikennevirtoihin ja
+                        erityisesti metroliikenteeseen.</p>
+                </article>
 
-        <p>Olen Data engineer, ennakoinnin asiantuntija sekä kauppatieteilijä. Laaja-alainen ymmärrykseni
-            liiketoiminnasta yhdistettynä
-            tekniseen osaamiseen tulevaisuuslähtöisesti ovat antaneet minulle työkaluja ongelmien ratkaisemiseen ja
-            analyysien tuottamiseen.
-        </p>
+                <article class="projekti">
+                    <h4>Kandidaatintutkielma <span class="projekti__vuosi">2020</span></h4>
+                    <p>Vastuullisuusraportti asiakasdialogin välineenä: case Paulig. Sisällönanalyysi Pauligin
+                        vastuullisuusraporteista ja niiden roolista kuluttajaviestinnässä.</p>
+                </article>
+            </div>
+        </section>
 
-        <h3>Mitä teen nyt?</h3>
+        <section class="osio" id="kokemus" aria-labelledby="kokemus-otsikko">
+            <h2 id="kokemus-otsikko">Kokemus</h2>
+            <div class="osio__sisalto">
+                <h3>Työ</h3>
+                <ol class="aikajana aikajana--jatkuu">
+                    <li class="nyt">
+                        <p class="aikajana__aika">2026–nyt</p>
+                        <h4>Data Engineer, Cloud2</h4>
+                        <p>Rakennan yritysasiakkaille data-alustoja ja dataputkia pilveen.</p>
+                    </li>
+                    <li>
+                        <p class="aikajana__aika">2024–2026</p>
+                        <h4>Data Engineer, Skillio</h4>
+                        <p>Kehitin tekoälypohjaista apuopettajaa Skillion koulutusohjelman oppijoille: muunsin sisäistä
+                            tekstidataa sopiviin muotoihin, keräsin lisämateriaalia julkisista verkkolähteistä sekä
+                            mallinsin ja visualisoin yrityksen tietokantoja. Rakensin dataputkia Pythonilla ja
+                            raportointia Googlen pilvipalveluihin.</p>
+                    </li>
+                    <li>
+                        <p class="aikajana__aika">2022–2024</p>
+                        <h4>Foresight Specialist, KONE</h4>
+                        <p>Kehitin yhtiön ennakointiprosessia ja kirjoitin ennakoinnin pelikirjan strategia- ja
+                            innovaatiotiimeille. Haastattelin asiantuntijoita ja analysoin aineistoja
+                            ennakointiprojekteissa, ylläpidin ennakointialustaa ja järjestin neljännesvuosittaisen
+                            Foresight Friday -tilaisuuden.</p>
+                    </li>
+                    <li>
+                        <p class="aikajana__aika">2021</p>
+                        <h4>Foresight Trainee, Futures Platform</h4>
+                        <p>Kirjoitin kuvauksia tulevaisuuden ilmiöistä ja kehityskuluista ja avustin asiakastyöpajoissa.
+                        </p>
+                    </li>
+                </ol>
 
-        <p>Tällä hetkellä työskentelen Skilliolla data engineerinä. Työtehtäviini kuuluu mm. dataputkien rakentamista
-            pythonilla sekä raporttien kokoamista Googlen pilvipalveluissa.</p>
-        <p> Iltaisin opiskelen Haaga-Heliassa IT-tradenomin tutkintoa työn ohessa keskittyen data-analytiikkaan ja
-            tietokantoihin.</p>
+                <details class="lisaa">
+                    <summary>Muut työt</summary>
+                    <ul class="lista">
+                        <li><strong>Asiakaspalvelija, Posti</strong> (2021–2022). Asiakaspalvelua ja myyntiä Helsingin
+                            keskustassa. Olin etulinjassa käsittelemässä palautetta, niin hyvässä kuin pahassa.</li>
+                        <li><strong>Myyntiedustaja, Nordic Sales Crew</strong> (2021). ASICSin tuotteiden asiantuntija
+                            urheiluliikkeessä.</li>
+                        <li><strong>Kirjastoapulainen, Helsingin yliopiston kirjasto.</strong> Siviilipalvelus:
+                            asiakaspalvelua, hyllytystä, organisointia ja asiakastietokannan ylläpitoa.</li>
+                    </ul>
+                </details>
 
-        <h3>Entäs vapaa-aika?</h3>
+                <details class="lisaa">
+                    <summary>Asennetta kasvattavat työt</summary>
+                    <ul class="lista">
+                        <li><strong>Joulukuusimyyjä, Havunen.</strong> Räntäsade Citymarketin parkkipaikalla kasvatti
+                            luonnetta. Sesongin iloiset asiakkaat ja Havusen tukeva tiimi toivat energiaa.</li>
+                        <li><strong>Yöjakelija, Posti.</strong> Jaoin Helsingin Sanomia Itä-Helsingin yössä. Fyysinen
+                            työ opetti paljon sitkeydestä ja aerobisen liikunnan tärkeydestä.</li>
+                        <li><strong>F2F-varainhankkija, Suomen Punainen Risti.</strong> Kun onnistumisprosentti on
+                            tilastollisesti pieni, oppii pitkäjänteisyyttä ja suhtautumaan epäonnistumisiin
+                            rakentavasti.</li>
+                    </ul>
+                </details>
 
-        <p>Vapaa-ajallani harrastan jalkapalloa, boulderoin sekä pelaan lautapelejä. Kokeilen mielelläni uusia asioita,
-            viimeisimpänä kirveenheitto ja frisbeegolf.</p>
-        <p>Pidän myös kirjoista, mutta niille ei koskaan ole tarpeeksi aikaa. Viimeisin lukemani kirja on Heikki Kännön
-            Ihmishämärä.</p>
+                <h3>Koulutus</h3>
+                <ol class="aikajana">
+                    <li>
+                        <p class="aikajana__aika">2024</p>
+                        <h4>Data engineer -koulutusohjelma, Skillio</h4>
+                        <p>Azure, Python, SQL ja tietokannat sekä ETL-putkien rakentaminen Pythonilla ja Azuren
+                            työkaluilla.</p>
+                    </li>
+                    <li>
+                        <p class="aikajana__aika">2020–2023</p>
+                        <h4>Valtiotieteiden maisteri, Turun yliopisto</h4>
+                        <p>Pääaineena tulevaisuudentutkimus ja sivuaineena vastuullinen liiketoiminta. Keskityin
+                            strategiseen ennakointiin.</p>
+                    </li>
+                    <li>
+                        <p class="aikajana__aika">2015–2020</p>
+                        <h4>Kauppatieteiden kandidaatti, Tampereen yliopisto</h4>
+                        <p>Pääaineena yrityksen johtaminen ja sivuaineena vastuullinen liiketoiminta.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
 
+        <section class="osio" id="cv" aria-labelledby="cv-otsikko">
+            <h2 id="cv-otsikko">CV</h2>
+            <div class="osio__sisalto">
+                <p>Lataa CV PDF-tiedostona suomeksi tai englanniksi.</p>
+                <p class="napit">
+                    <a class="nappi nappi--ensisijainen" href="cv_Suomi.pdf">CV suomeksi (PDF)</a>
+                    <a class="nappi nappi--toissijainen" href="cv_English.pdf" hreflang="en" lang="en">CV in English (PDF)</a>
+                </p>
+            </div>
+        </section>
 
+        <section class="osio englanniksi" id="in-english" lang="en" aria-labelledby="en-otsikko">
+            <h2 id="en-otsikko">In English</h2>
+            <div class="osio__sisalto">
+                <p>I’m a data engineer with a background in business and strategic foresight. I work at Cloud2, where
+                    I build data platforms and pipelines in the cloud for enterprise clients. Before that, I built
+                    data pipelines and reporting at Skillio and developed strategic foresight at KONE.</p>
+                <p>My latest side project is an end-to-end energy data platform on Azure and Databricks, built with
+                    Terraform, dbt and GitHub Actions. It shows that wind explains up to two fifths of the variation
+                    in the Finnish day-ahead electricity price.</p>
+                <p><a href="cv_English.pdf">Download my CV in English (PDF)</a></p>
+            </div>
+        </section>
+    </main>
 
-
-
-    </div>
-
-    <div class="sivuston_alalaita">
-        <ul>
-            <li><a href="https://www.linkedin.com/in/joeloranen/" target="_blank">LinkedIn</a></li>
-            <li><a href="mailto:joel.oranen@gmail.com">Email</a></li>
-            <li><a href="https://github.com/jtnOranen" target="_blank">GitHub</a></li>
-        </ul>
-    </div>
-
-
-
-
-
+    <footer class="alapalkki">
+        <div class="osio" id="yhteys">
+            <h2>Ota yhteyttä</h2>
+            <div class="osio__sisalto">
+                <ul class="yhteystiedot">
+                    <li><a href="mailto:joel.oranen@gmail.com">joel.oranen@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/joeloranen/">LinkedIn</a></li>
+                    <li><a href="https://github.com/jtnOranen">GitHub</a></li>
+                </ul>
+                <p class="alapalkki__huomautus">Tehty HTML:llä ja CSS:llä ilman kehyksiä. © 2026 Joel Oranen</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
