@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Joel Oranen – Data engineer</title>
-    <meta name="description" content="Joel Oranen on data engineer, jolla on tausta kauppatieteissä ja strategisessa ennakoinnissa. Projektit, työkokemus ja CV.">
+    <meta name="description" content="Joel Oranen is a data engineer with a background in business and futures studies. I build data pipelines people can trust.">
     <link rel="canonical" href="https://jtnoranen.github.io/">
-    <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#021c1e" media="(prefers-color-scheme: dark)">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#F6F2EA">
 
     <meta property="og:type" content="profile">
-    <meta property="og:locale" content="fi_FI">
+    <meta property="og:locale" content="en_GB">
     <meta property="og:site_name" content="Joel Oranen">
     <meta property="og:title" content="Joel Oranen – Data engineer">
-    <meta property="og:description" content="Data engineer, jolla on tausta kauppatieteissä ja strategisessa ennakoinnissa. Projektit, työkokemus ja CV.">
+    <meta property="og:description" content="Business grad turned data engineer. I build data pipelines people can trust.">
     <meta property="og:url" content="https://jtnoranen.github.io/">
     <meta property="og:image" content="https://jtnoranen.github.io/img/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -29,7 +28,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="style.css">
 
     <script type="application/ld+json">
@@ -51,244 +50,270 @@
 </head>
 
 <body>
-    <a class="ohituslinkki" href="#sisalto">Siirry sisältöön</a>
+    <a class="skip-link" href="#content">Skip to content</a>
 
-    <header class="ylapalkki">
-        <div class="ylapalkki__sisus">
-            <a class="ylapalkki__nimi" href="#sisalto">Joel Oranen</a>
-            <nav class="navigaatio" aria-label="Sivun osiot">
-                <ul>
-                    <li><a href="#mina">Minä</a></li>
-                    <li><a href="#projektit">Projektit</a></li>
-                    <li><a href="#kokemus">Kokemus</a></li>
-                    <li><a href="#cv">CV</a></li>
-                    <li><a href="#in-english" lang="en">In English</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="wrap topbar">
+        <a class="topbar__name" href="#content">Joel Oranen</a>
+        <nav aria-label="Sections">
+            <ul class="topbar__links">
+                <li><a href="#now">Now</a></li>
+                <li><a href="#next">Next</a></li>
+                <li><a href="#someday">Someday</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main id="sisalto">
-        <section class="hero" aria-labelledby="hero-otsikko">
-            <div class="hero__kuva">
-                <picture>
-                    <source type="image/webp"
-                        srcset="img/joel-oranen-640.webp 640w, img/joel-oranen.webp 1260w"
-                        sizes="(min-width: 100rem) 100rem, 100vw">
-                    <img src="img/joel-oranen.jpg"
-                        srcset="img/joel-oranen-640.jpg 640w, img/joel-oranen.jpg 1260w"
-                        sizes="(min-width: 100rem) 100rem, 100vw"
-                        width="1260" height="840" fetchpriority="high"
-                        alt="Joel Oranen hymyilee sinisessä pikkutakissa.">
-                </picture>
-            </div>
-            <div class="hero__teksti">
-                <h1 id="hero-otsikko"><span>Joel</span> <span>Oranen</span></h1>
-                <p class="hero__rooli">Data engineer</p>
-                <p class="hero__motto">Tehdään datalla tulevaisuutta.</p>
-                <p class="napit">
-                    <a class="nappi nappi--ensisijainen" href="#projektit">Katso projektit</a>
-                    <a class="nappi nappi--toissijainen" href="cv_Suomi.pdf">Lataa CV (PDF)</a>
+    <main id="content">
+        <section class="wrap hero" aria-labelledby="hero-title">
+            <div class="hero__text">
+                <div class="hello">
+                    <img class="hello__photo" src="img/joel-oranen-cv.jpg" width="360" height="360"
+                        alt="Joel Oranen smiling in a blue blazer.">
+                    <div>
+                        <p class="hello__greeting">Hey, I'm Joel</p>
+                        <p class="label">Data engineer at Cloud2</p>
+                    </div>
+                </div>
+                <h1 id="hero-title">I build data pipelines people can <em>trust.</em></h1>
+                <p class="lead">Business grad turned data engineer. I like clean models, honest dashboards, and asking
+                    what the data will mean a year from now.</p>
+                <p class="buttons">
+                    <a class="button button--primary" href="#now">See my work</a>
+                    <a class="button button--secondary" href="cv_English.pdf">Download CV</a>
                 </p>
+                <p class="currently"><span class="currently__dot" aria-hidden="true"></span>Currently: building cloud
+                    data platforms at Cloud2</p>
+            </div>
+
+            <div class="hero__diagram">
+                <svg class="pipeline" viewBox="0 0 560 420" role="img"
+                    aria-label="Animated diagram of Joel as a data pipeline: learning, doing, iterating and coffee flow into me, which serves pipelines, dashboards and decisions. A handwritten note points at decisions: the one people actually care about.">
+                    <defs>
+                        <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <circle cx="2" cy="2" r="1" fill="#1E2A3A" fill-opacity="0.12" />
+                        </pattern>
+                    </defs>
+                    <rect width="560" height="420" fill="url(#dots)" />
+
+                    <text class="mono" x="0" y="28" font-size="12" fill="#5A6472">$ run pipeline --daily<tspan class="cursor" fill="#C8822E">▍</tspan></text>
+
+                    <g fill="none" stroke="#1E2A3A" stroke-opacity="0.22" stroke-width="1.25">
+                        <path d="M104,95 C152,95 152,200 200,200" />
+                        <path d="M104,165 C152,165 152,200 200,200" />
+                        <path d="M104,235 C152,235 152,200 200,200" />
+                        <path d="M104,305 C152,305 152,200 200,200" />
+                        <path d="M280,200 C340,200 340,130 400,130" />
+                        <path d="M280,200 L400,200" />
+                        <path d="M280,200 C340,200 340,270 400,270" />
+                    </g>
+                    <g fill="none" stroke="#C8822E" stroke-width="2" stroke-linecap="round">
+                        <path class="flow" d="M104,95 C152,95 152,200 200,200" />
+                        <path class="flow" style="animation-delay: -0.6s" d="M104,165 C152,165 152,200 200,200" />
+                        <path class="flow" style="animation-delay: -1.2s" d="M104,235 C152,235 152,200 200,200" />
+                        <path class="flow" style="animation-delay: -1.8s" d="M104,305 C152,305 152,200 200,200" />
+                        <path class="flow" style="animation-delay: -0.6s" d="M280,200 C340,200 340,130 400,130" />
+                        <path class="flow" style="animation-delay: -1.2s" d="M280,200 L400,200" />
+                        <path class="flow" style="animation-delay: -1.8s" d="M280,200 C340,200 340,270 400,270" />
+                    </g>
+
+                    <g fill="#FFFDF8" stroke="#1E2A3A" stroke-opacity="0.3" stroke-width="1">
+                        <rect x="0" y="77" width="104" height="36" rx="10" />
+                        <rect x="0" y="147" width="104" height="36" rx="10" />
+                        <rect x="0" y="217" width="104" height="36" rx="10" />
+                        <rect x="0" y="287" width="104" height="36" rx="10" />
+                        <rect x="200" y="182" width="80" height="36" rx="18" stroke="#C8822E" stroke-opacity="0.9" stroke-width="1.5" />
+                        <rect x="400" y="112" width="160" height="36" rx="10" />
+                        <rect x="400" y="182" width="160" height="36" rx="10" />
+                        <rect x="400" y="252" width="160" height="36" rx="10" stroke="#C8822E" stroke-opacity="0.9" />
+                    </g>
+
+                    <g fill="#C8822E">
+                        <circle class="light" cx="14" cy="95" r="4" />
+                        <circle class="light" cx="14" cy="165" r="4" />
+                        <circle class="light" cx="14" cy="235" r="4" />
+                        <circle class="light" cx="14" cy="305" r="4" />
+                        <circle class="light" style="animation-delay: 0.8s" cx="216" cy="200" r="4" />
+                        <circle class="light" style="animation-delay: 1.6s" cx="414" cy="130" r="4" />
+                        <circle class="light" style="animation-delay: 1.6s" cx="414" cy="200" r="4" />
+                        <circle class="light" style="animation-delay: 1.6s" cx="414" cy="270" r="4" />
+                    </g>
+
+                    <g class="mono" font-size="11" letter-spacing="0.5" fill="#1E2A3A">
+                        <text x="26" y="99">learning</text>
+                        <text x="26" y="169">doing</text>
+                        <text x="26" y="239">iterating</text>
+                        <text x="26" y="309">coffee</text>
+                        <text x="232" y="204" font-weight="500">me</text>
+                        <text x="426" y="134">pipelines</text>
+                        <text x="426" y="204">dashboards</text>
+                        <text x="426" y="274">decisions</text>
+                    </g>
+
+                    <g fill="none" stroke="#8A500E" stroke-width="1.5" stroke-linecap="round">
+                        <path d="M506,310 C503,303 500,298 497,293" />
+                        <path d="M492,298 L497,291 L502,297" />
+                    </g>
+                    <g class="hand" font-size="21" fill="#8A500E">
+                        <text x="560" y="330" text-anchor="end">the one people</text>
+                        <text x="560" y="352" text-anchor="end">ACTUALLY care about</text>
+                    </g>
+
+                    <g class="mono" font-size="11" letter-spacing="1" fill="#5A6472">
+                        <text x="0" y="410">SOURCES</text>
+                        <text x="200" y="410">INGEST</text>
+                        <text x="400" y="410">SERVE</text>
+                    </g>
+                </svg>
             </div>
         </section>
 
-        <section class="osio" id="mina" aria-labelledby="mina-otsikko">
-            <h2 id="mina-otsikko">Minä</h2>
-            <div class="osio__sisalto">
-                <p class="johdanto">Olen data engineer, jolla on tausta kauppatieteissä ja tulevaisuudentutkimuksessa.
-                    Yhdistän teknisen osaamisen ymmärrykseen siitä, mihin liiketoiminta dataa tarvitsee.</p>
-                <p>Työskentelen data engineerinä Cloud2:lla, jossa rakennan yritysasiakkaille data-alustoja ja
-                    dataputkia pilveen. Sitä ennen rakensin Skilliolla dataputkia ja raportointia Pythonilla ja
-                    Googlen pilvipalveluilla, ja KONEella kehitin yhtiön strategista ennakointia.</p>
-                <p>Tutuimmat työkaluni: Python, SQL, Azure, Databricks, dbt, Terraform, GitHub Actions, BigQuery,
-                    Microsoft Fabric ja Power BI.</p>
-                <p>Vapaa-ajallani pelaan jalkapalloa ja lautapelejä sekä boulderoin.</p>
+        <section class="wrap section" id="now" aria-labelledby="now-title">
+            <header class="section__head">
+                <p class="label label--accent">01 · Now</p>
+                <h2 id="now-title">What I'm building <em>right now</em></h2>
+                <p class="section__intro">By day I build data platforms and pipelines in the cloud for enterprise clients
+                    at Cloud2. On the side, a few projects of my own.</p>
+            </header>
+
+            <div class="cards">
+                <article class="card">
+                    <p class="label">Project · 2026</p>
+                    <h3>Energy data platform</h3>
+                    <p>How do wind and weather show up in Finland's day-ahead electricity price? I built an end-to-end
+                        platform on Azure and Databricks to find out: ingestion from three open APIs, lakehouse layers,
+                        dbt models and infrastructure as code.</p>
+                    <div class="card__result">
+                        <p class="label label--accent">Result</p>
+                        <p class="card__result-text">Wind explains up to two fifths of the price variation</p>
+                    </div>
+                    <ul class="tags">
+                        <li>terraform</li>
+                        <li>azure</li>
+                        <li>databricks</li>
+                        <li>dbt</li>
+                        <li>github actions</li>
+                    </ul>
+                    <a class="card__link" href="https://github.com/jtnOranen/energy-data-platform">Source on GitHub →</a>
+                </article>
+
+                <article class="card">
+                    <p class="label">Project · 2025</p>
+                    <h3>Plant companions</h3>
+                    <p>Which vegetables grow well together? The app suggests where to plant the vegetables you pick on
+                        a garden grid, using a simple scoring model.</p>
+                    <div class="card__result">
+                        <p class="label label--accent">Built with</p>
+                        <p class="card__result-text">Python and Streamlit</p>
+                    </div>
+                    <ul class="tags">
+                        <li>python</li>
+                        <li>streamlit</li>
+                    </ul>
+                    <a class="card__link" href="https://github.com/jtnOranen/Plant_companions">Source on GitHub →</a>
+                </article>
+            </div>
+
+            <div class="experience" id="experience">
+                <h3 class="label">Experience</h3>
+                <ol class="experience__list">
+                    <li><span class="experience__years">2026–now</span><span class="experience__role">Data engineer,
+                            Cloud2</span><span class="experience__note">Data platforms and pipelines in the cloud for
+                            enterprise clients.</span></li>
+                    <li><span class="experience__years">2024–2026</span><span class="experience__role">Data engineer,
+                            Skillio</span><span class="experience__note">Python pipelines, reporting on Google Cloud and
+                            data for an AI teaching assistant.</span></li>
+                    <li><span class="experience__years">2022–2024</span><span class="experience__role">Foresight
+                            specialist, KONE</span><span class="experience__note">The company's foresight process and
+                            a foresight playbook for strategy teams.</span></li>
+                    <li><span class="experience__years">2021</span><span class="experience__role">Futures analyst
+                            trainee, Futures Platform</span><span class="experience__note">Futures phenomena for the
+                            foresight database and client workshops.</span></li>
+                </ol>
+                <p class="experience__education">Master of Social Sciences in futures studies, University of Turku.
+                    BSc (Econ. &amp; Bus. Adm.), Tampere University.</p>
+                <p class="experience__cv">Full CV: <a href="cv_English.pdf">English (PDF)</a> or <a href="cv_Suomi.pdf"
+                        hreflang="fi" lang="fi">suomeksi (PDF)</a></p>
             </div>
         </section>
 
-        <section class="osio" id="projektit" aria-labelledby="projektit-otsikko">
-            <h2 id="projektit-otsikko">Projektit</h2>
-            <div class="osio__sisalto">
-                <h3>Dataprojektit</h3>
+        <div class="band" id="next">
+            <section class="wrap section" aria-labelledby="next-title">
+                <header class="section__head">
+                    <p class="label label--accent">02 · Next</p>
+                    <h2 id="next-title">On my <em>workbench</em></h2>
+                    <p class="section__intro">Half-finished, fully interesting. What I'm learning and tinkering with
+                        next.</p>
+                </header>
+                <ul class="bench">
+                    <li class="bench__row">
+                        <div class="bench__status">
+                            <span class="label">Learning</span>
+                        </div>
+                        <p class="bench__title">Microsoft Fabric and agentic tools</p>
+                        <p class="bench__note">Fabric's AI features, Project Osmos and other agentic tools for data
+                            work.</p>
+                    </li>
+                    <li class="bench__row">
+                        <div class="bench__status">
+                            <span class="label">Building</span>
+                        </div>
+                        <p class="bench__title">Price forecasts on the energy platform</p>
+                        <p class="bench__note">Almost done. Learning more Databricks, infrastructure as code and GitHub
+                            Actions along the way.</p>
+                    </li>
+                    <li class="bench__row">
+                        <div class="bench__status">
+                            <span class="label">Building</span>
+                        </div>
+                        <p class="bench__title">This website</p>
+                        <p class="bench__note">Plain HTML and CSS, a pipeline that animates itself, and a live photo on
+                            the way.</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
 
-                <article class="projekti">
-                    <h4>Energiadata-alusta <span class="projekti__vuosi">2026</span></h4>
-                    <p>Miten tuulivoima ja sää näkyvät Suomen sähkön vuorokausihinnassa? Rakensin vastausta varten
-                        kokonaisen data-alustan Azureen ja Databricksiin: datan haku kolmesta avoimesta rajapinnasta,
-                        lakehouse-kerrokset, dbt-mallinnus ja infrastruktuuri koodina. Tuuli selittää jopa kaksi
-                        viidesosaa hinnan vaihtelusta.</p>
-                    <p class="projekti__tiedot">Tekniikat: Terraform, Azure, Databricks, dbt ja GitHub Actions.
-                        <a href="https://github.com/jtnOranen/energy-data-platform">Lähdekoodi GitHubissa</a></p>
-                </article>
-
-                <article class="projekti">
-                    <h4>Vedonlyöntikertoimet ja ottelutulokset <span class="projekti__vuosi">2025</span></h4>
-                    <p>Kuinka hyvin vedonvälittäjien kertoimet vastaavat jalkapallo-otteluiden todellisia tuloksia?
-                        ETL-harjoitusprojekti, jossa otteludata haetaan ja esikäsitellään, ladataan PostgreSQL:ään,
-                        siirretään BigQueryyn ja raportoidaan Power BI:ssä.</p>
-                    <p class="projekti__tiedot">Tekniikat: Python, PostgreSQL, BigQuery ja Power BI.
-                        <a href="https://github.com/jtnOranen/Bookies-odds-etl">Lähdekoodi GitHubissa</a></p>
-                </article>
-
-                <article class="projekti">
-                    <h4>Kasvimaan seuralaiskasvit <span class="projekti__vuosi">2025</span></h4>
-                    <p>Sovellus ehdottaa käyttäjän valitsemille vihanneksille paikat kasvimaan ruudukossa yksinkertaisen
-                        pisteytyksen perusteella.</p>
-                    <p class="projekti__tiedot">Tekniikat: Python ja Streamlit.
-                        <a href="https://github.com/jtnOranen/Plant_companions">Lähdekoodi GitHubissa</a></p>
-                </article>
-
-                <h3>Tutkimus ja ennakointi</h3>
-
-                <article class="projekti">
-                    <h4><a href="https://www.utupub.fi/handle/10024/174286">Pro gradu</a>
-                        <span class="projekti__vuosi">2023</span></h4>
-                    <p><cite lang="en">Pioneering spirit and village community of the future: Images of the future of
-                            church members of Jätkäsaari in the year 2040.</cite> Vedin Jätkäsaaren seurakunnan
-                        jäsenille työpajan, jossa hahmottelimme kaupunginosan toivottuja tulevaisuuskuvia sekä niitä
-                        tukevia ja uhkaavia trendejä.</p>
-                </article>
-
-                <article class="projekti">
-                    <h4>Ennakointiprojektit KONEella <span class="projekti__vuosi">2022–2024</span></h4>
-                    <p>Future of Living- ja Future of Mobility and Mobility Hubs -projektien haastattelut ja analyysit
-                        sekä ennakoinnin pelikirja strategia- ja innovaatiotiimeille. Pelikirja esittelee
-                        tulevaisuudentutkimuksen keskeiset menetelmät liiketoiminnan näkökulmasta.</p>
-                </article>
-
-                <article class="projekti">
-                    <h4>Kruunusiltojen systeemianalyysi</h4>
-                    <p>Lyhyt tutkimus siitä, miten Kruunusiltojen rakentaminen vaikuttaa Helsingin liikennevirtoihin ja
-                        erityisesti metroliikenteeseen.</p>
-                </article>
-
-                <article class="projekti">
-                    <h4>Kandidaatintutkielma <span class="projekti__vuosi">2020</span></h4>
-                    <p>Vastuullisuusraportti asiakasdialogin välineenä: case Paulig. Sisällönanalyysi Pauligin
-                        vastuullisuusraporteista ja niiden roolista kuluttajaviestinnässä.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="osio" id="kokemus" aria-labelledby="kokemus-otsikko">
-            <h2 id="kokemus-otsikko">Kokemus</h2>
-            <div class="osio__sisalto">
-                <h3>Työ</h3>
-                <ol class="aikajana aikajana--jatkuu">
-                    <li class="nyt">
-                        <p class="aikajana__aika">2026–nyt</p>
-                        <h4>Data Engineer, Cloud2</h4>
-                        <p>Rakennan yritysasiakkaille data-alustoja ja dataputkia pilveen.</p>
+        <div class="night" id="someday">
+            <section class="wrap section" aria-labelledby="someday-title">
+                <header class="section__head">
+                    <p class="label label--accent">03 · Someday</p>
+                    <h2 id="someday-title">Questions I keep <em>coming back to</em></h2>
+                    <p class="section__intro">The futures-studies side of me: a master's in futures studies and two
+                        years of foresight at KONE. No answers yet, just good questions.</p>
+                </header>
+                <ol class="questions">
+                    <li>
+                        <span class="label label--accent">Q.01</span>
+                        <p>What does a data team look like when AI writes half the pipelines?</p>
                     </li>
                     <li>
-                        <p class="aikajana__aika">2024–2026</p>
-                        <h4>Data Engineer, Skillio</h4>
-                        <p>Kehitin tekoälypohjaista apuopettajaa Skillion koulutusohjelman oppijoille: muunsin sisäistä
-                            tekstidataa sopiviin muotoihin, keräsin lisämateriaalia julkisista verkkolähteistä sekä
-                            mallinsin ja visualisoin yrityksen tietokantoja. Rakensin dataputkia Pythonilla ja
-                            raportointia Googlen pilvipalveluihin.</p>
+                        <span class="label label--accent">Q.02</span>
+                        <p>How will Finland's electricity market change when most of it runs on wind?</p>
                     </li>
                     <li>
-                        <p class="aikajana__aika">2022–2024</p>
-                        <h4>Foresight Specialist, KONE</h4>
-                        <p>Kehitin yhtiön ennakointiprosessia ja kirjoitin ennakoinnin pelikirjan strategia- ja
-                            innovaatiotiimeille. Haastattelin asiantuntijoita ja analysoin aineistoja
-                            ennakointiprojekteissa, ylläpidin ennakointialustaa ja järjestin neljännesvuosittaisen
-                            Foresight Friday -tilaisuuden.</p>
-                    </li>
-                    <li>
-                        <p class="aikajana__aika">2021</p>
-                        <h4>Foresight Trainee, Futures Platform</h4>
-                        <p>Kirjoitin kuvauksia tulevaisuuden ilmiöistä ja kehityskuluista ja avustin asiakastyöpajoissa.
-                        </p>
+                        <span class="label label--accent">Q.03</span>
+                        <p>Can better data help organisations plan for more than one future?</p>
                     </li>
                 </ol>
-
-                <details class="lisaa">
-                    <summary>Muut työt</summary>
-                    <ul class="lista">
-                        <li><strong>Asiakaspalvelija, Posti</strong> (2021–2022). Asiakaspalvelua ja myyntiä Helsingin
-                            keskustassa. Olin etulinjassa käsittelemässä palautetta, niin hyvässä kuin pahassa.</li>
-                        <li><strong>Myyntiedustaja, Nordic Sales Crew</strong> (2021). ASICSin tuotteiden asiantuntija
-                            urheiluliikkeessä.</li>
-                        <li><strong>Kirjastoapulainen, Helsingin yliopiston kirjasto.</strong> Siviilipalvelus:
-                            asiakaspalvelua, hyllytystä, organisointia ja asiakastietokannan ylläpitoa.</li>
-                    </ul>
-                </details>
-
-                <details class="lisaa">
-                    <summary>Asennetta kasvattavat työt</summary>
-                    <ul class="lista">
-                        <li><strong>Joulukuusimyyjä, Havunen.</strong> Räntäsade Citymarketin parkkipaikalla kasvatti
-                            luonnetta. Sesongin iloiset asiakkaat ja Havusen tukeva tiimi toivat energiaa.</li>
-                        <li><strong>Yöjakelija, Posti.</strong> Jaoin Helsingin Sanomia Itä-Helsingin yössä. Fyysinen
-                            työ opetti paljon sitkeydestä ja aerobisen liikunnan tärkeydestä.</li>
-                        <li><strong>F2F-varainhankkija, Suomen Punainen Risti.</strong> Kun onnistumisprosentti on
-                            tilastollisesti pieni, oppii pitkäjänteisyyttä ja suhtautumaan epäonnistumisiin
-                            rakentavasti.</li>
-                    </ul>
-                </details>
-
-                <h3>Koulutus</h3>
-                <ol class="aikajana">
-                    <li>
-                        <p class="aikajana__aika">2024</p>
-                        <h4>Data engineer -koulutusohjelma, Skillio</h4>
-                        <p>Azure, Python, SQL ja tietokannat sekä ETL-putkien rakentaminen Pythonilla ja Azuren
-                            työkaluilla.</p>
-                    </li>
-                    <li>
-                        <p class="aikajana__aika">2020–2023</p>
-                        <h4>Valtiotieteiden maisteri, Turun yliopisto</h4>
-                        <p>Pääaineena tulevaisuudentutkimus ja sivuaineena vastuullinen liiketoiminta. Keskityin
-                            strategiseen ennakointiin.</p>
-                    </li>
-                    <li>
-                        <p class="aikajana__aika">2015–2020</p>
-                        <h4>Kauppatieteiden kandidaatti, Tampereen yliopisto</h4>
-                        <p>Pääaineena yrityksen johtaminen ja sivuaineena vastuullinen liiketoiminta.</p>
-                    </li>
-                </ol>
-            </div>
-        </section>
-
-        <section class="osio" id="cv" aria-labelledby="cv-otsikko">
-            <h2 id="cv-otsikko">CV</h2>
-            <div class="osio__sisalto">
-                <p>Lataa CV PDF-tiedostona suomeksi tai englanniksi.</p>
-                <p class="napit">
-                    <a class="nappi nappi--ensisijainen" href="cv_Suomi.pdf">CV suomeksi (PDF)</a>
-                    <a class="nappi nappi--toissijainen" href="cv_English.pdf" hreflang="en" lang="en">CV in English (PDF)</a>
-                </p>
-            </div>
-        </section>
-
-        <section class="osio englanniksi" id="in-english" lang="en" aria-labelledby="en-otsikko">
-            <h2 id="en-otsikko">In English</h2>
-            <div class="osio__sisalto">
-                <p>I’m a data engineer with a background in business and strategic foresight. I work at Cloud2, where
-                    I build data platforms and pipelines in the cloud for enterprise clients. Before that, I built
-                    data pipelines and reporting at Skillio and developed strategic foresight at KONE.</p>
-                <p>My latest side project is an end-to-end energy data platform on Azure and Databricks, built with
-                    Terraform, dbt and GitHub Actions. It shows that wind explains up to two fifths of the variation
-                    in the Finnish day-ahead electricity price.</p>
-                <p><a href="cv_English.pdf">Download my CV in English (PDF)</a></p>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
-    <footer class="alapalkki">
-        <div class="osio" id="yhteys">
-            <h2>Ota yhteyttä</h2>
-            <div class="osio__sisalto">
-                <ul class="yhteystiedot">
-                    <li><a href="mailto:joel.oranen@gmail.com">joel.oranen@gmail.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/joeloranen/">LinkedIn</a></li>
-                    <li><a href="https://github.com/jtnOranen">GitHub</a></li>
-                </ul>
-                <p class="alapalkki__huomautus">Tehty HTML:llä ja CSS:llä ilman kehyksiä. © 2026 Joel Oranen</p>
-            </div>
+    <footer class="wrap section contact" id="contact" aria-labelledby="contact-title">
+        <p class="label label--accent">04 · Contact</p>
+        <h2 id="contact-title" class="contact__title">Let's talk <em>data.</em></h2>
+        <p class="section__intro">Hiring, collaborating, or just want to compare notes on data platforms? My inbox is
+            open.</p>
+        <a class="contact__email" href="mailto:joel.oranen@gmail.com">joel.oranen@gmail.com</a>
+        <ul class="contact__links">
+            <li><a href="https://www.linkedin.com/in/joeloranen/">LinkedIn ↗</a></li>
+            <li><a href="https://github.com/jtnOranen">GitHub ↗</a></li>
+            <li><a href="cv_English.pdf">CV (PDF)</a></li>
+        </ul>
+        <div class="contact__footer">
+            <p>© 2026 Joel Oranen. Plain HTML and CSS.</p>
+            <p>Off the clock: football, board games and bouldering.</p>
         </div>
     </footer>
 </body>

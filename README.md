@@ -6,8 +6,8 @@ Sivusto on puhdasta HTML:ää ja CSS:ää ilman build-vaihetta. GitHub Pages jul
 
 ## Rakenne
 
-- `index.html` ja `style.css`: koko sivusto yhdellä sivulla
-- `img/`: valokuva JPEG- ja WebP-muodossa, jakokuva `og-image.jpg` ja CV-kuva
+- `index.html` ja `style.css`: koko sivusto yhdellä englanninkielisellä sivulla (Now, Next, Someday, Contact)
+- `img/`: valokuva JPEG- ja WebP-muodossa, jakokuva `og-image.jpg` ja neliökuva, jota CV:t ja etusivun avatar käyttävät
 - `cv/`: CV:iden lähdesivut, joista PDF:t tulostetaan
 - `cv_Suomi.pdf` ja `cv_English.pdf`: ladattavat CV:t
 - `cv.html` ja `portfolio.html`: vanhojen osoitteiden uudelleenohjaukset
