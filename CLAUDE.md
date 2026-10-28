@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Joel Oranen's personal site, published by GitHub Pages from `main` at https://jtnoranen.github.io/. Plain HTML and CSS with no build step, framework or JavaScript; GitHub Pages' Jekyll copies the files as they are. Anything that is not part of the site (notes, scripts) must be listed under `exclude` in `_config.yml`, or it gets published.
 
-Site copy is Finnish, written in the first person for data engineering recruiters. The only English on the main page is the `#in-english` section (`lang="en"`). Class names are Finnish, BEM-style (`.ylapalkki__nimi`, `.nappi--ensisijainen`).
+The main page is in English, written in the first person for data engineering recruiters and collaborators. Its sections are Now (current work, projects and an experience list, `#now` and `#experience`), Next (`#next`, what Joel is learning or building), Someday (`#someday`, futures-studies questions) and Contact (`#contact`). The CVs stay bilingual (`cv_English.pdf`, `cv_Suomi.pdf`).
 
 ## Commands
 
@@ -23,32 +23,26 @@ curl -s -H "Content-Type: text/html; charset=utf-8" --data-binary @index.html "h
 
 ## Content lives in three places
 
-Work history, education and projects appear in `index.html` (`#projektit`, `#kokemus`, and the current job in `#mina` and `#in-english`), `cv/cv-fi.html` and `cv/cv-en.html`. A content change usually touches all three, followed by a PDF rebuild. Each CV must stay on one A4 page: check the page count of the generated PDFs (for example with pypdf) and tighten the text if a second page appears.
+Work history, education and projects appear in `index.html` (project cards and `#experience` in `#now`, the current job also in the hero and the `#now` intro), `cv/cv-fi.html` and `cv/cv-en.html`. A content change usually touches all three, followed by a PDF rebuild. Each CV must stay on one A4 page: check the page count of the generated PDFs (for example with pypdf) and tighten the text if a second page appears.
 
 The CVs list only email, LinkedIn, GitHub and the site. Do not add a phone number, home address or birth date; the old Canva CV that used to be published here exposed them.
 
-`cv.html` and `portfolio.html` are meta-refresh redirects to `index.html#kokemus` and `#projektit`, kept so that old links keep working. The navigation links in `index.html` must match the section ids.
+`cv.html` and `portfolio.html` are meta-refresh redirects to `index.html#experience` and `#now`, kept so that old links keep working. The navigation links in `index.html` must match the section ids.
 
 ## Styling
 
-- All colours come from custom properties on `:root` in `style.css`, and the dark palette is a full override in `@media (prefers-color-scheme: dark)`. A new colour needs a value in both. The teal accent (`--korostus`, `#2c7873` light and `#6cc1ba` dark) is the only accent colour, and the palette was checked for WCAG AA contrast.
-- Space Grotesk is the only typeface, loaded from Google Fonts in each page's `<head>`.
-- The hero has two layouts. Below `56rem` the photo and the text are stacked. From `56rem` up they share one grid cell, with the text over a dark gradient on the left side of the photo. The grid row must stay `minmax(0, 1fr)`, or the row grows to the image's natural height and pushes the text down.
-- The only photo is 1260×840 and no larger version exists. The hero is therefore capped at `100rem` and anchored to the top (`object-position: 65% 0%`) because the head is close to the top edge.
+- All colours are custom properties on `:root` in `style.css`. The page is light only (warm paper `#F6F2EA`, ink `#1E2A3A`); the Someday band is the one dark surface. Amber `#C8822E` is for graphics (lines, dots, outlines) and `#8A500E` for accent text, which passes WCAG AA on paper, cards and the Next band.
+- Four Google Fonts, loaded in `index.html`'s `<head>`: Fraunces (headings), Inter (body), JetBrains Mono (small uppercase labels, tags, dates) and Caveat (handwriting).
+- Handwriting is used in exactly two places: the "Hey, I'm Joel" greeting and the "the one people ACTUALLY care about" note in the pipeline diagram. Do not add more.
+- The hero diagram is an inline SVG of Joel as a pipeline (learning, doing, iterating, coffee → me → pipelines, dashboards, decisions). It is animated with CSS only (`.flow`, `.light`, `.cursor`), and every animation sits inside `@media (prefers-reduced-motion: no-preference)`.
+- Layouts are flex rows with `flex-wrap` and flex-basis in rem, so everything stacks on phones without breakpoints. Check that the page has no horizontal scroll at 390 px.
 - `cv/cv.css` is separate from `style.css`. It is light-only and sized in mm for A4 printing.
-
-Design decisions to keep:
-- Sentence case everywhere, with no all-caps labels.
-- No `A · B · C` meta strings; write lists of tools as a sentence, for example "Tekniikat: Python ja Streamlit."
-- No arrows appended to links.
-- No cards, shadows or entrance animations.
-- The dashed line at the top of the work timeline (`.aikajana--jatkuu`) and the filled dot (`li.nyt`) mark the current job.
 
 ## Images
 
 The images in `img/` were made from the original photo `img/joel-oranen.jpg` with Pillow, and the repo has no image pipeline:
-- 640 px wide JPEG and WebP versions for the hero's `srcset`
+- 640 px wide JPEG and WebP versions (used by the old full-width hero; not referenced by the current page)
 - `og-image.jpg` (1200×630), referenced by absolute URL in the Open Graph tags
-- `joel-oranen-cv.jpg`, a square crop used by the CVs
+- `joel-oranen-cv.jpg`, a square crop used by the CVs and the hero avatar
 
-`favicon.svg` and `apple-touch-icon.png` draw the same "Jo" monogram.
+`favicon.svg` and `apple-touch-icon.png` draw the same "Jo" monogram. The hero avatar reuses `joel-oranen-cv.jpg`; a short muted looping video ("live photo") is planned to replace it, with the still image kept as the poster and reduced-motion fallback.
