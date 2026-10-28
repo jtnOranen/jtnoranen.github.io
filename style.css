@@ -497,28 +497,10 @@ a:hover {
 
 .bench__status {
     flex: 0 0 8.75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
 }
 
 .bench__status .label {
     color: var(--ink);
-}
-
-.bench__bar {
-    display: block;
-    width: 7.5rem;
-    height: 4px;
-    border-radius: 999px;
-    background: var(--line);
-}
-
-.bench__bar span {
-    display: block;
-    height: 100%;
-    border-radius: 999px;
-    background: var(--amber);
 }
 
 .bench__title {
