@@ -194,13 +194,38 @@ a:hover {
     gap: 1rem;
 }
 
+/* Live photo: a muted looping clip, swapped for a still frame when motion is reduced */
 .hello__photo {
-    width: 4.5rem;
-    height: 4.5rem;
+    position: relative;
+    width: 5.5rem;
+    height: 5.5rem;
     border-radius: 50%;
     border: 2px solid var(--amber);
-    object-fit: cover;
+    overflow: hidden;
     flex: none;
+    background: var(--mist);
+}
+
+.hello__video,
+.hello__still {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hello__still {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hello__video {
+        display: none;
+    }
+
+    .hello__still {
+        display: block;
+    }
 }
 
 .hello__greeting {

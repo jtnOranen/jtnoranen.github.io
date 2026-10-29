@@ -68,8 +68,13 @@
         <section class="wrap hero" aria-labelledby="hero-title">
             <div class="hero__text">
                 <div class="hello">
-                    <img class="hello__photo" src="img/joel-oranen-cv.jpg" width="360" height="360"
-                        alt="Joel Oranen smiling in a blue blazer.">
+                    <span class="hello__photo" role="img" aria-label="Joel Oranen smiling and waving.">
+                        <video class="hello__video" autoplay muted loop playsinline preload="auto"
+                            poster="img/joel-live-poster.jpg" width="320" height="320" aria-hidden="true">
+                            <source src="img/joel-live.mp4" type="video/mp4">
+                        </video>
+                        <img class="hello__still" src="img/joel-live-still.jpg" width="320" height="320" alt="">
+                    </span>
                     <div>
                         <p class="hello__greeting">Hey, I'm Joel</p>
                         <p class="label">Data engineer at Cloud2</p>

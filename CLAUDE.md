@@ -43,6 +43,8 @@ The CVs list only email, LinkedIn, GitHub and the site. Do not add a phone numbe
 The images in `img/` were made from the original photo `img/joel-oranen.jpg` with Pillow, and the repo has no image pipeline:
 - 640 px wide JPEG and WebP versions (used by the old full-width hero; not referenced by the current page)
 - `og-image.jpg` (1200×630), referenced by absolute URL in the Open Graph tags
-- `joel-oranen-cv.jpg`, a square crop used by the CVs and the hero avatar
+- `joel-oranen-cv.jpg`, a square crop used by the CVs
 
-`favicon.svg` and `apple-touch-icon.png` draw the same "Jo" monogram. The hero avatar reuses `joel-oranen-cv.jpg`; a short muted looping video ("live photo") is planned to replace it, with the still image kept as the poster and reduced-motion fallback.
+`favicon.svg` and `apple-touch-icon.png` draw the same "Jo" monogram.
+
+The hero avatar is a "live photo": `img/joel-live.mp4`, a 320×320, 6.8 s, muted H.264 loop of Joel waving (about 100 KB), made with ffmpeg from a webcam clip: square crop around the face, a slight warm grade, and the last 0.6 s cross-faded into the start so the loop has no jump. `img/joel-live-poster.jpg` is its first frame (shown while it loads) and `img/joel-live-still.jpg` a smiling frame shown instead of the video when the visitor prefers reduced motion. Autoplay needs `muted` and `playsinline`; the accessible name sits on the wrapping `span role="img"`, and the video and still are hidden from assistive tech.
