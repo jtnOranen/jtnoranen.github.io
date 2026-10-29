@@ -86,8 +86,9 @@
                     <a class="button button--primary" href="#now">See my work</a>
                     <a class="button button--secondary" href="cv_English.pdf">Download CV</a>
                 </p>
-                <p class="currently"><span class="currently__dot" aria-hidden="true"></span>Currently: building cloud
-                    data platforms at Cloud2</p>
+                <p class="currently"><span class="currently__dot" aria-hidden="true"></span><span>Currently:
+                        <span class="currently__text" id="currently">building cloud data platforms at
+                            Cloud2</span></span></p>
             </div>
 
             <div class="hero__diagram">
@@ -321,6 +322,65 @@
             <p>Off the clock: football, board games and bouldering.</p>
         </div>
     </footer>
+    <script>
+        /* "Currently" follows Joel's day in Helsinki time. Without JavaScript the work line stays. */
+        (function () {
+            var el = document.getElementById("currently");
+            if (!el || !window.Intl) return;
+            var work = ["building cloud data platforms at Cloud2"];
+            var morning = ["getting ready for the day"];
+            var hobbies = ["playing football", "socializing", "quality time with my wife", "gaming", "bouldering",
+                "just chilling", "reading"];
+            var evening = ["relaxing"];
+            var night = ["sleeping", "dreaming", "snoring"];
+            var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            var clock = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Helsinki", hour: "numeric", hourCycle: "h23", weekday: "short" });
+
+            function activities() {
+                var hour = 0, day = "";
+                clock.formatToParts(new Date()).forEach(function (part) {
+                    if (part.type === "hour") hour = parseInt(part.value, 10);
+                    if (part.type === "weekday") day = part.value;
+                });
+                var weekend = day === "Sat" || day === "Sun";
+                if (hour >= 23 || hour < 7) return night;
+                if (hour < 9) return morning;
+                if (hour < 17 && !weekend) return work;
+                if (hour < 21) return hobbies;
+                return evening;
+            }
+
+            function show(text, animate) {
+                if (el.textContent === text) return;
+                if (!animate || still) { el.textContent = text; return; }
+                el.classList.add("is-out");
+                setTimeout(function () {
+                    el.textContent = text;
+                    el.classList.remove("is-out");
+                    el.classList.add("is-below");
+                    void el.offsetWidth;
+                    el.classList.remove("is-below");
+                }, 350);
+            }
+
+            var list = [], index = 0;
+            function tick(first) {
+                var next = activities();
+                if (next !== list) {
+                    list = next;
+                    index = Math.floor(Math.random() * list.length);
+                } else if (still || list.length === 1) {
+                    return;
+                } else {
+                    index = (index + 1) % list.length;
+                }
+                show(list[index], !first);
+            }
+
+            tick(true);
+            setInterval(function () { tick(false); }, still ? 60000 : 2800);
+        })();
+    </script>
 </body>
 
 </html>
