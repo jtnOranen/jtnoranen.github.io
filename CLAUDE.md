@@ -32,8 +32,8 @@ The CVs list only email, LinkedIn, GitHub and the site. Do not add a phone numbe
 ## Styling
 
 - All colours are custom properties on `:root` in `style.css`. The page is light only (warm paper `#F6F2EA`, ink `#1E2A3A`); the Someday band is the one dark surface. Amber `#C8822E` is for graphics (lines, dots, outlines) and `#8A500E` for accent text, which passes WCAG AA on paper, cards and the Next band.
-- Three Google Fonts, loaded in `index.html`'s `<head>`: Fraunces (headings), Inter (body text, small uppercase labels, tags, dates and the diagram) and Caveat (handwriting only). Do not add a fourth; a monospace font was tried and removed as too busy.
-- Handwriting is used in exactly two places: the "Hey, I'm Joel" greeting and the "the one people ACTUALLY care about" note in the pipeline diagram. Do not add more.
+- Three Google Fonts, loaded in `index.html`'s `<head>`: Fraunces (headings), Inter (body text, small uppercase labels, tags, dates and the diagram) and Caveat (the handwritten notes only). Do not add a fourth; a monospace font was tried and removed as too busy.
+- Handwriting is used in exactly three places: the "Hey, I'm Joel" greeting, the "the one people ACTUALLY care about" note in the pipeline diagram and the "Get a cup of coffee maybe?" note next to "Let's talk data." Do not add more unless Joel asks.
 - The hero diagram is an inline SVG of Joel as a pipeline (learning, doing, iterating, coffee → me → pipelines, dashboards, decisions). It is animated with CSS only (`.flow`, `.light`, `.cursor`), and every animation sits inside `@media (prefers-reduced-motion: no-preference)`.
 - Layouts are flex rows with `flex-wrap` and flex-basis in rem, so everything stacks on phones without breakpoints. Check that the page has no horizontal scroll at 390 px.
 - `cv/cv.css` is separate from `style.css`. It is light-only and sized in mm for A4 printing.
@@ -43,6 +43,8 @@ The CVs list only email, LinkedIn, GitHub and the site. Do not add a phone numbe
 The images in `img/` were made from the original photo `img/joel-oranen.jpg` with Pillow, and the repo has no image pipeline:
 - 640 px wide JPEG and WebP versions (used by the old full-width hero; not referenced by the current page)
 - `og-image.jpg` (1200×630), referenced by absolute URL in the Open Graph tags
-- `joel-oranen-cv.jpg`, a square crop used by the CVs and the hero avatar
+- `joel-oranen-cv.jpg`, a square crop used by the CVs
 
-`favicon.svg` and `apple-touch-icon.png` draw the same "Jo" monogram. The hero avatar reuses `joel-oranen-cv.jpg`; a short muted looping video ("live photo") is planned to replace it, with the still image kept as the poster and reduced-motion fallback.
+`favicon.svg` and `apple-touch-icon.png` draw the same "Jo" monogram.
+
+The hero avatar is a "live photo": `img/joel-live.mp4`, a 320×320, 5.4 s, muted H.264 loop of Joel waving (about 75 KB), made with ffmpeg from a webcam clip: seconds 1.0–6.45 of the clip, a 720×720 crop at x=160 (the full frame height, set left of the face so the waving hand stays inside the circle), a slight warm grade, and the last 0.4 s cross-faded with the 0.4 s just before the start so the loop has no jump. `img/joel-live-poster.jpg` is its first frame (shown while it loads) and `img/joel-live-still.jpg` a smiling frame shown instead of the video when the visitor prefers reduced motion. Autoplay needs `muted` and `playsinline`; the accessible name sits on the wrapping `span role="img"`, and the video and still are hidden from assistive tech.

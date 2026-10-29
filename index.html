@@ -68,8 +68,13 @@
         <section class="wrap hero" aria-labelledby="hero-title">
             <div class="hero__text">
                 <div class="hello">
-                    <img class="hello__photo" src="img/joel-oranen-cv.jpg" width="360" height="360"
-                        alt="Joel Oranen smiling in a blue blazer.">
+                    <span class="hello__photo" role="img" aria-label="Joel Oranen smiling and waving.">
+                        <video class="hello__video" autoplay muted loop playsinline preload="auto"
+                            poster="img/joel-live-poster.jpg" width="320" height="320" aria-hidden="true">
+                            <source src="img/joel-live.mp4" type="video/mp4">
+                        </video>
+                        <img class="hello__still" src="img/joel-live-still.jpg" width="320" height="320" alt="">
+                    </span>
                     <div>
                         <p class="hello__greeting">Hey, I'm Joel</p>
                         <p class="label">Data engineer at Cloud2</p>
@@ -289,7 +294,7 @@
                     </li>
                     <li>
                         <span class="label label--accent">Q.02</span>
-                        <p>How will Finland's electricity market change when most of it runs on wind?</p>
+                        <p>If AI can create the dashboards, what's the benefit of data platforms?</p>
                     </li>
                     <li>
                         <span class="label label--accent">Q.03</span>
@@ -302,7 +307,10 @@
 
     <footer class="wrap section contact" id="contact" aria-labelledby="contact-title">
         <p class="label label--accent">04 · Contact</p>
-        <h2 id="contact-title" class="contact__title">Let's talk <em>data.</em></h2>
+        <div class="contact__headline">
+            <h2 id="contact-title" class="contact__title">Let's talk <em>data.</em></h2>
+            <p class="contact__note">Get a cup of coffee maybe?</p>
+        </div>
         <p class="section__intro">Hiring, collaborating, or just want to compare notes on data platforms? My inbox is
             open.</p>
         <a class="contact__email" href="mailto:joel.oranen@gmail.com">joel.oranen@gmail.com</a>
@@ -312,7 +320,6 @@
             <li><a href="cv_English.pdf">CV (PDF)</a></li>
         </ul>
         <div class="contact__footer">
-            <p>© 2026 Joel Oranen. Plain HTML and CSS.</p>
             <p>Off the clock: football, board games and bouldering.</p>
         </div>
     </footer>
