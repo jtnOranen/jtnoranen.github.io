@@ -282,6 +282,22 @@ a:hover {
     color: var(--muted);
 }
 
+.currently__text {
+    display: inline-block;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.currently__text.is-out {
+    opacity: 0;
+    transform: translateY(-0.4em);
+}
+
+.currently__text.is-below {
+    opacity: 0;
+    transform: translateY(0.4em);
+    transition: none;
+}
+
 .currently__dot {
     width: 0.5rem;
     height: 0.5rem;

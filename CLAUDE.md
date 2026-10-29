@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Joel Oranen's personal site, published by GitHub Pages from `main` at https://jtnoranen.github.io/. Plain HTML and CSS with no build step, framework or JavaScript; GitHub Pages' Jekyll copies the files as they are. Anything that is not part of the site (notes, scripts) must be listed under `exclude` in `_config.yml`, or it gets published.
+Joel Oranen's personal site, published by GitHub Pages from `main` at https://jtnoranen.github.io/. Plain HTML and CSS with no build step or framework; GitHub Pages' Jekyll copies the files as they are. The only JavaScript is one small inline script at the end of `index.html` for the hero's "Currently" line, and the page must work without it. Anything that is not part of the site (notes, scripts) must be listed under `exclude` in `_config.yml`, or it gets published.
 
 The main page is in English, written in the first person for data engineering recruiters and collaborators. Its sections are Now (current work, projects and an experience list, `#now` and `#experience`), Next (`#next`, what Joel is learning or building), Someday (`#someday`, futures-studies questions) and Contact (`#contact`). The CVs stay bilingual (`cv_English.pdf`, `cv_Suomi.pdf`).
 
@@ -35,6 +35,7 @@ The CVs list only email, LinkedIn, GitHub and the site. Do not add a phone numbe
 - Three Google Fonts, loaded in `index.html`'s `<head>`: Fraunces (headings), Inter (body text, small uppercase labels, tags, dates and the diagram) and Caveat (the handwritten notes only). Do not add a fourth; a monospace font was tried and removed as too busy.
 - Handwriting is used in exactly three places: the "Hey, I'm Joel" greeting, the "that's the point" note in the pipeline diagram (tilted 6° clockwise, pointing at decisions) and the "Get a cup of coffee maybe?" note next to "Let's talk data." Do not add more unless Joel asks.
 - The hero diagram is an inline SVG of Joel as a pipeline (learning, doing, iterating, coffee → me → pipelines, dashboards, decisions). It is animated with CSS only (`.flow`, `.light`, `.cursor`), and every animation sits inside `@media (prefers-reduced-motion: no-preference)`.
+- The hero's "Currently" line follows Joel's day in Helsinki time: weekdays 09–17 Cloud2 work, 17–21 (and weekends 09–21) rotating hobbies, 21–23 relaxing, 23–07 sleeping/dreaming/snoring, 07–09 getting ready. Lists with several items rotate every 2.8 s with a short slide; with reduced motion one item is shown without animation. The HTML holds the work line as the no-JavaScript fallback.
 - Layouts are flex rows with `flex-wrap` and flex-basis in rem, so everything stacks on phones without breakpoints. Check that the page has no horizontal scroll at 390 px.
 - `cv/cv.css` is separate from `style.css`. It is light-only and sized in mm for A4 printing.
 
