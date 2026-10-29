@@ -32,8 +32,8 @@ The CVs list only email, LinkedIn, GitHub and the site. Do not add a phone numbe
 ## Styling
 
 - All colours are custom properties on `:root` in `style.css`. The page is light only (warm paper `#F6F2EA`, ink `#1E2A3A`); the Someday band is the one dark surface. Amber `#C8822E` is for graphics (lines, dots, outlines) and `#8A500E` for accent text, which passes WCAG AA on paper, cards and the Next band.
-- Three Google Fonts, loaded in `index.html`'s `<head>`: Fraunces (headings), Inter (body text, small uppercase labels, tags, dates and the diagram) and Caveat (handwriting only). Do not add a fourth; a monospace font was tried and removed as too busy.
-- Handwriting is used in exactly two places: the "Hey, I'm Joel" greeting and the "the one people ACTUALLY care about" note in the pipeline diagram. Do not add more.
+- Three Google Fonts, loaded in `index.html`'s `<head>`: Fraunces (headings), Inter (body text, small uppercase labels, tags, dates and the diagram) and Caveat (the handwritten notes only). Do not add a fourth; a monospace font was tried and removed as too busy.
+- Handwriting is used in exactly three places: the "Hey, I'm Joel" greeting, the "the one people ACTUALLY care about" note in the pipeline diagram and the "Get a cup of coffee maybe?" note next to "Let's talk data." Do not add more unless Joel asks.
 - The hero diagram is an inline SVG of Joel as a pipeline (learning, doing, iterating, coffee → me → pipelines, dashboards, decisions). It is animated with CSS only (`.flow`, `.light`, `.cursor`), and every animation sits inside `@media (prefers-reduced-motion: no-preference)`.
 - Layouts are flex rows with `flex-wrap` and flex-basis in rem, so everything stacks on phones without breakpoints. Check that the page has no horizontal scroll at 390 px.
 - `cv/cv.css` is separate from `style.css`. It is light-only and sized in mm for A4 printing.
