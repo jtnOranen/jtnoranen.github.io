@@ -331,21 +331,40 @@
             var morning = ["getting ready for the day"];
             var hobbies = ["playing football", "socializing", "quality time with my wife", "gaming", "bouldering",
                 "just chilling", "reading"];
+            var dayOff = ["learning", "reading", "playing football", "socializing", "quality time with my wife",
+                "gaming", "bouldering", "just chilling"];
             var evening = ["relaxing"];
             var night = ["sleeping", "dreaming", "snoring"];
             var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-            var clock = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Helsinki", hour: "numeric", hourCycle: "h23", weekday: "short" });
+            var clock = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Helsinki", year: "numeric", month: "numeric",
+                day: "numeric", hour: "numeric", hourCycle: "h23", weekday: "short" });
+
+            /* Easter Sunday (Gregorian), as a UTC timestamp */
+            function easter(y) {
+                var a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4,
+                    f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30,
+                    i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7,
+                    m = Math.floor((a + 11 * h + 22 * l) / 451), n = h + l - 7 * m + 114;
+                return Date.UTC(y, Math.floor(n / 31) - 1, (n % 31) + 1);
+            }
+
+            /* Finnish public holidays that fall on weekdays, plus Christmas Eve and Midsummer Eve */
+            function holiday(y, mo, d, day) {
+                var fixed = [101, 106, 501, 1206, 1224, 1225, 1226];
+                if (fixed.indexOf(mo * 100 + d) !== -1) return true;
+                if (mo === 6 && d >= 19 && d <= 25 && day === "Fri") return true;
+                var fromEaster = Math.round((Date.UTC(y, mo - 1, d) - easter(y)) / 86400000);
+                return fromEaster === -2 || fromEaster === 1 || fromEaster === 39;
+            }
 
             function activities() {
-                var hour = 0, day = "";
-                clock.formatToParts(new Date()).forEach(function (part) {
-                    if (part.type === "hour") hour = parseInt(part.value, 10);
-                    if (part.type === "weekday") day = part.value;
-                });
-                var weekend = day === "Sat" || day === "Sun";
+                var p = {};
+                clock.formatToParts(new Date()).forEach(function (part) { p[part.type] = part.value; });
+                var hour = parseInt(p.hour, 10), y = parseInt(p.year, 10), mo = parseInt(p.month, 10), d = parseInt(p.day, 10);
+                var off = p.weekday === "Sat" || p.weekday === "Sun" || holiday(y, mo, d, p.weekday);
                 if (hour >= 23 || hour < 7) return night;
                 if (hour < 9) return morning;
-                if (hour < 17 && !weekend) return work;
+                if (hour < 17) return off ? dayOff : work;
                 if (hour < 21) return hobbies;
                 return evening;
             }
