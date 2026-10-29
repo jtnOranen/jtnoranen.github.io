@@ -20,7 +20,6 @@
 
     --serif: "Fraunces", Georgia, serif;
     --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    --mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
     --hand: "Caveat", "Segoe Print", cursive;
 
     --wrap: 75rem;
@@ -120,14 +119,14 @@ a:hover {
     color: var(--paper);
 }
 
-/* Small mono labels */
+/* Small uppercase labels */
 .label {
-    font-family: var(--mono);
-    font-size: 0.8rem;
+    font-family: var(--sans);
+    font-size: 0.75rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--muted);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.4;
 }
 
@@ -260,7 +259,7 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 0.625rem;
-    font-family: var(--mono);
+    font-family: var(--sans);
     font-size: 0.8rem;
     color: var(--muted);
 }
@@ -279,8 +278,8 @@ a:hover {
     height: auto;
 }
 
-.pipeline .mono {
-    font-family: var(--mono);
+.pipeline .ui {
+    font-family: var(--sans);
 }
 
 .pipeline .hand {
@@ -415,7 +414,7 @@ a:hover {
 }
 
 .tags li {
-    font-family: var(--mono);
+    font-family: var(--sans);
     font-size: 0.75rem;
     padding: 0.3rem 0.65rem;
     border-radius: 999px;
@@ -452,10 +451,11 @@ a:hover {
 
 .experience__years {
     flex: 0 0 7rem;
-    font-family: var(--mono);
-    font-size: 0.85rem;
+    font-family: var(--sans);
+    font-size: 0.875rem;
+    font-variant-numeric: tabular-nums;
     color: var(--muted);
-    padding-top: 0.15rem;
+    padding-top: 0.1rem;
 }
 
 .experience__role {
@@ -600,7 +600,7 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 0.75rem 1.5rem;
-    font-family: var(--mono);
+    font-family: var(--sans);
     font-size: 0.8rem;
     color: var(--muted);
 }
