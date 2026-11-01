@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Joel Oranen – Data engineer</title>
-    <meta name="description" content="Joel Oranen on data engineer, jolla on tausta kauppatieteissä ja strategisessa ennakoinnissa. Projektit, työkokemus ja CV.">
+    <meta name="description" content="Joel Oranen is a data engineer with a background in business and strategic foresight. Projects, experience and CV.">
     <link rel="canonical" href="https://jtnoranen.github.io/">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#021c1e" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#16191d" media="(prefers-color-scheme: dark)">
 
     <meta property="og:type" content="profile">
-    <meta property="og:locale" content="fi_FI">
+    <meta property="og:locale" content="en_GB">
     <meta property="og:site_name" content="Joel Oranen">
     <meta property="og:title" content="Joel Oranen – Data engineer">
-    <meta property="og:description" content="Data engineer, jolla on tausta kauppatieteissä ja strategisessa ennakoinnissa. Projektit, työkokemus ja CV.">
+    <meta property="og:description" content="Data engineer with a background in business and strategic foresight. Projects, experience and CV.">
     <meta property="og:url" content="https://jtnoranen.github.io/">
     <meta property="og:image" content="https://jtnoranen.github.io/img/og-image.jpg">
     <meta property="og:image:width" content="1200">
@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..600&display=swap">
     <link rel="stylesheet" href="style.css">
 
     <script type="application/ld+json">
@@ -51,246 +51,304 @@
 </head>
 
 <body>
-    <a class="ohituslinkki" href="#sisalto">Siirry sisältöön</a>
+    <!-- Each section is one panel; the links scroll the row of panels sideways. -->
+    <main class="paneelit">
+        <section class="paneeli" id="home" aria-labelledby="nimi">
+            <div class="paneeli__sisus etusivu">
+                <h1 id="nimi">Joel Oranen</h1>
+                <p class="etusivu__rooli">Data engineer</p>
 
-    <header class="ylapalkki">
-        <div class="ylapalkki__sisus">
-            <a class="ylapalkki__nimi" href="#sisalto">Joel Oranen</a>
-            <nav class="navigaatio" aria-label="Sivun osiot">
-                <ul>
-                    <li><a href="#mina">Minä</a></li>
-                    <li><a href="#projektit">Projektit</a></li>
-                    <li><a href="#kokemus">Kokemus</a></li>
-                    <li><a href="#cv">CV</a></li>
-                    <li><a href="#in-english" lang="en">In English</a></li>
+                <div class="kuva">
+                    <video class="kuva__video" width="480" height="360" autoplay muted loop playsinline
+                        poster="img/joel-vilkuttaa.jpg" aria-label="Joel Oranen waving at the camera.">
+                        <source src="img/joel-vilkuttaa.webm" type="video/webm">
+                        <source src="img/joel-vilkuttaa.mp4" type="video/mp4">
+                    </video>
+                    <img class="kuva__still" src="img/joel-vilkuttaa.jpg" width="480" height="360"
+                        alt="Joel Oranen waving at the camera.">
+                    <!-- Paper with a torn hole lies over the video. -->
+                    <svg class="kuva__repeama" viewBox="0 0 120 90" aria-hidden="true" focusable="false">
+                        <defs>
+                            <filter id="karhea" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+                                <feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="4" seed="3" result="kohina"/>
+                                <feDisplacementMap in="SourceGraphic" in2="kohina" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+                            </filter>
+                            <filter id="kuitu" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+                                <feTurbulence type="fractalNoise" baseFrequency="0.25" numOctaves="3" seed="5" result="kohina"/>
+                                <feDisplacementMap in="SourceGraphic" in2="kohina" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+                            </filter>
+                            <filter id="varjo" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+                                <feGaussianBlur stdDeviation="1.2"/>
+                            </filter>
+                            <path id="reika" d="M109.7 45.0 L108.2 46.1 L107.6 47.1 L110.4 48.4 L110.6 49.6 L106.9 50.3 L106.4 51.3 L106.9 52.5 L110.1 54.1 L111.9 55.7 L110.2 56.6 L105.6 56.6 L104.8 57.6 L104.8 58.7 L101.7 58.9 L102.5 60.3 L100.0 60.5 L101.1 62.1 L98.9 62.4 L99.1 63.6 L102.1 66.3 L99.1 66.1 L96.3 65.9 L96.5 67.3 L96.8 68.8 L94.1 68.4 L93.6 69.4 L90.5 68.6 L89.0 68.7 L88.7 69.9 L86.5 69.4 L85.4 69.9 L85.1 71.0 L83.3 70.7 L82.2 71.1 L82.0 72.6 L82.1 74.4 L82.5 77.0 L81.4 77.6 L80.3 78.3 L79.9 80.1 L78.5 80.6 L78.2 82.9 L75.4 80.3 L74.2 80.9 L72.9 81.5 L71.6 81.9 L70.9 84.4 L69.4 84.3 L67.8 84.0 L66.1 82.8 L64.7 83.1 L63.3 83.5 L61.9 83.3 L60.5 84.1 L59.0 81.7 L57.6 82.6 L56.2 82.1 L54.7 83.6 L53.2 84.0 L51.4 85.8 L49.6 86.6 L48.6 84.5 L47.4 83.4 L45.6 84.3 L44.2 83.7 L42.4 84.4 L41.4 82.9 L40.6 81.4 L39.0 81.3 L38.0 80.4 L36.5 80.1 L35.4 79.5 L33.8 79.3 L33.0 78.1 L31.9 77.4 L31.2 76.3 L30.4 75.3 L29.8 74.2 L27.8 74.3 L26.6 73.8 L25.9 72.7 L25.8 71.3 L24.7 70.7 L23.0 70.4 L20.6 70.6 L19.0 70.2 L18.1 69.3 L17.0 68.5 L16.8 67.2 L16.9 65.8 L16.0 64.9 L17.5 63.0 L17.5 61.9 L17.0 60.9 L15.0 60.5 L14.4 59.5 L13.5 58.6 L14.0 57.3 L11.3 56.9 L11.4 55.8 L10.8 54.7 L9.4 53.9 L8.5 52.9 L7.3 51.9 L10.0 50.4 L10.1 49.3 L12.2 48.1 L9.1 47.2 L8.6 46.1 L8.6 45.0 L7.6 43.9 L7.0 42.7 L6.2 41.5 L9.2 40.6 L8.8 39.4 L9.7 38.4 L10.5 37.4 L11.1 36.4 L11.6 35.4 L13.2 34.7 L11.6 33.2 L13.5 32.5 L13.0 31.2 L13.8 30.3 L14.5 29.4 L13.9 27.9 L12.9 26.3 L16.8 26.7 L18.4 26.2 L20.5 26.0 L20.4 24.7 L21.3 23.9 L21.1 22.5 L20.5 20.8 L20.7 19.5 L22.1 18.9 L22.2 17.5 L23.2 16.6 L24.1 15.7 L24.8 14.6 L27.2 15.1 L27.8 13.8 L27.9 12.1 L27.4 9.5 L30.7 11.2 L34.3 13.5 L36.1 13.9 L37.7 13.9 L39.0 13.7 L40.1 13.2 L40.7 11.7 L42.5 12.4 L43.4 11.4 L44.3 10.2 L45.4 9.4 L47.4 11.0 L48.5 10.2 L50.2 11.6 L51.4 11.1 L52.6 10.8 L53.8 10.1 L55.0 9.0 L56.2 7.2 L57.6 7.8 L59.0 7.1 L60.4 6.6 L61.8 7.1 L63.3 6.9 L64.3 9.3 L65.3 11.5 L66.6 11.4 L67.4 13.3 L68.4 14.0 L70.5 11.4 L72.2 10.5 L72.9 12.2 L75.1 10.3 L76.7 10.1 L78.5 9.6 L80.1 9.5 L81.4 9.9 L83.4 9.5 L84.8 9.8 L87.0 9.3 L88.0 10.3 L89.8 10.3 L91.8 10.3 L93.0 11.1 L95.0 11.1 L96.6 11.6 L97.5 12.7 L98.8 13.5 L99.7 14.5 L98.8 16.9 L98.9 18.4 L99.6 19.4 L99.6 20.9 L99.4 22.4 L100.6 23.1 L103.3 23.1 L105.2 23.6 L106.5 24.4 L107.8 25.2 L107.8 26.5 L107.3 28.0 L108.8 28.8 L108.9 30.1 L107.6 31.7 L109.3 32.4 L108.8 33.8 L107.6 35.2 L109.9 35.9 L110.4 37.0 L109.8 38.2 L109.3 39.4 L109.2 40.6 L108.3 41.7 L109.9 42.8 L108.9 43.9Z"/>
+                        </defs>
+                        <use class="kuva__varjo" href="#reika" transform="translate(0.6 1)" filter="url(#varjo)"/>
+                        <path class="kuva__kuitu" fill-rule="evenodd" filter="url(#kuitu)"
+                            d="M-20 -20H140V110H-20Z M109.7 45.0 L108.2 46.1 L107.6 47.1 L110.4 48.4 L110.6 49.6 L106.9 50.3 L106.4 51.3 L106.9 52.5 L110.1 54.1 L111.9 55.7 L110.2 56.6 L105.6 56.6 L104.8 57.6 L104.8 58.7 L101.7 58.9 L102.5 60.3 L100.0 60.5 L101.1 62.1 L98.9 62.4 L99.1 63.6 L102.1 66.3 L99.1 66.1 L96.3 65.9 L96.5 67.3 L96.8 68.8 L94.1 68.4 L93.6 69.4 L90.5 68.6 L89.0 68.7 L88.7 69.9 L86.5 69.4 L85.4 69.9 L85.1 71.0 L83.3 70.7 L82.2 71.1 L82.0 72.6 L82.1 74.4 L82.5 77.0 L81.4 77.6 L80.3 78.3 L79.9 80.1 L78.5 80.6 L78.2 82.9 L75.4 80.3 L74.2 80.9 L72.9 81.5 L71.6 81.9 L70.9 84.4 L69.4 84.3 L67.8 84.0 L66.1 82.8 L64.7 83.1 L63.3 83.5 L61.9 83.3 L60.5 84.1 L59.0 81.7 L57.6 82.6 L56.2 82.1 L54.7 83.6 L53.2 84.0 L51.4 85.8 L49.6 86.6 L48.6 84.5 L47.4 83.4 L45.6 84.3 L44.2 83.7 L42.4 84.4 L41.4 82.9 L40.6 81.4 L39.0 81.3 L38.0 80.4 L36.5 80.1 L35.4 79.5 L33.8 79.3 L33.0 78.1 L31.9 77.4 L31.2 76.3 L30.4 75.3 L29.8 74.2 L27.8 74.3 L26.6 73.8 L25.9 72.7 L25.8 71.3 L24.7 70.7 L23.0 70.4 L20.6 70.6 L19.0 70.2 L18.1 69.3 L17.0 68.5 L16.8 67.2 L16.9 65.8 L16.0 64.9 L17.5 63.0 L17.5 61.9 L17.0 60.9 L15.0 60.5 L14.4 59.5 L13.5 58.6 L14.0 57.3 L11.3 56.9 L11.4 55.8 L10.8 54.7 L9.4 53.9 L8.5 52.9 L7.3 51.9 L10.0 50.4 L10.1 49.3 L12.2 48.1 L9.1 47.2 L8.6 46.1 L8.6 45.0 L7.6 43.9 L7.0 42.7 L6.2 41.5 L9.2 40.6 L8.8 39.4 L9.7 38.4 L10.5 37.4 L11.1 36.4 L11.6 35.4 L13.2 34.7 L11.6 33.2 L13.5 32.5 L13.0 31.2 L13.8 30.3 L14.5 29.4 L13.9 27.9 L12.9 26.3 L16.8 26.7 L18.4 26.2 L20.5 26.0 L20.4 24.7 L21.3 23.9 L21.1 22.5 L20.5 20.8 L20.7 19.5 L22.1 18.9 L22.2 17.5 L23.2 16.6 L24.1 15.7 L24.8 14.6 L27.2 15.1 L27.8 13.8 L27.9 12.1 L27.4 9.5 L30.7 11.2 L34.3 13.5 L36.1 13.9 L37.7 13.9 L39.0 13.7 L40.1 13.2 L40.7 11.7 L42.5 12.4 L43.4 11.4 L44.3 10.2 L45.4 9.4 L47.4 11.0 L48.5 10.2 L50.2 11.6 L51.4 11.1 L52.6 10.8 L53.8 10.1 L55.0 9.0 L56.2 7.2 L57.6 7.8 L59.0 7.1 L60.4 6.6 L61.8 7.1 L63.3 6.9 L64.3 9.3 L65.3 11.5 L66.6 11.4 L67.4 13.3 L68.4 14.0 L70.5 11.4 L72.2 10.5 L72.9 12.2 L75.1 10.3 L76.7 10.1 L78.5 9.6 L80.1 9.5 L81.4 9.9 L83.4 9.5 L84.8 9.8 L87.0 9.3 L88.0 10.3 L89.8 10.3 L91.8 10.3 L93.0 11.1 L95.0 11.1 L96.6 11.6 L97.5 12.7 L98.8 13.5 L99.7 14.5 L98.8 16.9 L98.9 18.4 L99.6 19.4 L99.6 20.9 L99.4 22.4 L100.6 23.1 L103.3 23.1 L105.2 23.6 L106.5 24.4 L107.8 25.2 L107.8 26.5 L107.3 28.0 L108.8 28.8 L108.9 30.1 L107.6 31.7 L109.3 32.4 L108.8 33.8 L107.6 35.2 L109.9 35.9 L110.4 37.0 L109.8 38.2 L109.3 39.4 L109.2 40.6 L108.3 41.7 L109.9 42.8 L108.9 43.9Z"/>
+                        <path class="kuva__paperi" fill-rule="evenodd" filter="url(#karhea)"
+                            d="M-20 -20H140V110H-20Z M111.7 45.0 L111.1 46.1 L111.1 47.3 L113.9 48.6 L113.0 49.8 L109.6 50.6 L109.2 51.7 L110.2 53.0 L113.1 54.7 L115.3 56.4 L113.8 57.4 L110.1 57.8 L108.2 58.5 L107.6 59.6 L105.6 60.2 L105.7 61.4 L104.3 62.1 L104.9 63.6 L104.5 64.8 L105.7 66.6 L107.8 69.1 L104.5 68.9 L101.1 68.5 L99.5 69.0 L98.3 69.7 L96.7 70.1 L96.2 71.2 L94.2 71.3 L92.8 71.8 L92.1 72.7 L90.5 73.0 L89.6 73.8 L89.1 75.0 L87.8 75.5 L86.8 76.2 L86.0 77.3 L85.1 78.3 L84.4 79.6 L82.9 79.9 L81.6 80.3 L80.6 81.5 L79.7 82.7 L79.3 85.2 L76.9 83.6 L75.5 84.0 L74.1 84.6 L72.6 84.8 L71.4 85.9 L69.9 86.3 L68.4 86.8 L66.8 86.5 L65.2 86.7 L63.7 86.8 L62.1 86.7 L60.6 87.1 L59.0 86.1 L57.5 86.7 L55.9 86.6 L54.3 87.4 L52.7 87.4 L51.0 87.9 L49.4 87.8 L47.9 87.1 L46.4 86.7 L44.7 86.9 L43.3 86.1 L41.8 85.6 L40.5 84.9 L39.1 84.3 L37.5 84.1 L36.2 83.4 L34.8 82.8 L33.6 82.0 L32.2 81.5 L31.2 80.5 L30.0 79.7 L29.0 78.7 L28.2 77.6 L27.6 76.4 L26.4 75.7 L25.6 74.7 L24.4 74.0 L23.5 73.1 L22.3 72.4 L20.9 71.9 L19.3 71.5 L17.6 71.0 L16.4 70.3 L15.5 69.3 L14.6 68.4 L13.5 67.5 L12.0 66.8 L11.8 65.5 L11.1 64.5 L10.3 63.4 L8.9 62.6 L8.2 61.5 L7.4 60.5 L7.3 59.2 L5.6 58.4 L5.5 57.1 L5.4 55.8 L5.2 54.6 L5.6 53.3 L5.0 52.2 L5.5 50.9 L4.9 49.8 L5.6 48.5 L4.1 47.4 L3.9 46.2 L4.1 45.0 L3.7 43.8 L3.3 42.5 L2.7 41.3 L4.0 40.1 L3.6 38.9 L4.3 37.7 L5.1 36.6 L6.0 35.5 L6.9 34.5 L8.3 33.6 L7.9 32.2 L9.2 31.3 L9.2 30.1 L9.9 29.0 L10.9 28.1 L11.5 27.0 L12.0 25.9 L13.8 25.4 L14.6 24.4 L15.8 23.7 L16.3 22.5 L17.5 21.8 L18.2 20.8 L18.8 19.7 L19.6 18.8 L20.4 17.7 L20.8 16.4 L21.7 15.5 L22.8 14.7 L23.8 13.7 L25.6 13.6 L26.6 12.6 L26.6 10.7 L26.6 8.5 L30.0 10.2 L32.6 11.3 L33.9 10.9 L35.2 10.3 L36.5 9.7 L37.8 9.3 L39.0 8.6 L40.9 9.1 L42.3 8.9 L43.6 8.6 L45.0 8.2 L46.6 8.8 L47.9 8.1 L49.4 8.5 L50.6 7.9 L52.0 7.6 L53.4 7.1 L54.7 6.6 L56.1 5.7 L57.6 6.0 L59.0 5.7 L60.5 5.5 L61.9 5.8 L63.4 5.5 L64.8 6.4 L66.1 7.0 L67.7 6.4 L69.0 6.9 L70.6 6.7 L72.8 4.6 L74.5 4.5 L75.3 6.5 L77.0 6.3 L78.4 6.7 L80.0 6.9 L81.5 7.1 L83.0 7.5 L84.7 7.5 L86.2 8.0 L87.9 8.1 L89.3 8.7 L91.4 8.5 L93.5 8.5 L95.1 9.0 L96.9 9.3 L98.4 10.0 L99.4 11.1 L100.7 12.0 L102.0 12.9 L102.3 14.4 L103.3 15.5 L104.4 16.4 L105.0 17.7 L105.3 19.1 L105.9 20.3 L107.2 21.2 L108.0 22.3 L108.5 23.5 L109.2 24.6 L109.6 25.9 L109.6 27.2 L110.5 28.3 L110.7 29.5 L110.3 30.9 L111.5 31.9 L111.5 33.1 L111.0 34.5 L112.1 35.5 L112.5 36.7 L113.0 37.8 L113.4 39.0 L113.7 40.2 L113.1 41.4 L113.3 42.6 L112.0 43.8Z"/>
+                    </svg>
+                </div>
+
+                <nav aria-label="Main">
+                    <ul class="linkit">
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#cv">CV</a></li>
+                    </ul>
+                </nav>
+                <ul class="linkit linkit--hiljainen">
+                    <li><a href="mailto:joel.oranen@gmail.com">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/joeloranen/">LinkedIn</a></li>
+                    <li><a href="https://github.com/jtnOranen">GitHub</a></li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main id="sisalto">
-        <section class="hero" aria-labelledby="hero-otsikko">
-            <div class="hero__kuva">
-                <picture>
-                    <source type="image/webp"
-                        srcset="img/joel-oranen-640.webp 640w, img/joel-oranen.webp 1260w"
-                        sizes="(min-width: 100rem) 100rem, 100vw">
-                    <img src="img/joel-oranen.jpg"
-                        srcset="img/joel-oranen-640.jpg 640w, img/joel-oranen.jpg 1260w"
-                        sizes="(min-width: 100rem) 100rem, 100vw"
-                        width="1260" height="840" fetchpriority="high"
-                        alt="Joel Oranen hymyilee sinisessä pikkutakissa.">
-                </picture>
-            </div>
-            <div class="hero__teksti">
-                <h1 id="hero-otsikko"><span>Joel</span> <span>Oranen</span></h1>
-                <p class="hero__rooli">Data engineer</p>
-                <p class="hero__motto">Tehdään datalla tulevaisuutta.</p>
-                <p class="napit">
-                    <a class="nappi nappi--ensisijainen" href="#projektit">Katso projektit</a>
-                    <a class="nappi nappi--toissijainen" href="cv_Suomi.pdf">Lataa CV (PDF)</a>
-                </p>
             </div>
         </section>
 
-        <section class="osio" id="mina" aria-labelledby="mina-otsikko">
-            <h2 id="mina-otsikko">Minä</h2>
-            <div class="osio__sisalto">
-                <p class="johdanto">Olen data engineer, jolla on tausta kauppatieteissä ja tulevaisuudentutkimuksessa.
-                    Yhdistän teknisen osaamisen ymmärrykseen siitä, mihin liiketoiminta dataa tarvitsee.</p>
-                <p>Työskentelen data engineerinä Cloud2:lla, jossa rakennan yritysasiakkaille data-alustoja ja
-                    dataputkia pilveen. Sitä ennen rakensin Skilliolla dataputkia ja raportointia Pythonilla ja
-                    Googlen pilvipalveluilla, ja KONEella kehitin yhtiön strategista ennakointia.</p>
-                <p>Tutuimmat työkaluni: Python, SQL, Azure, Databricks, dbt, Terraform, GitHub Actions, BigQuery,
-                    Microsoft Fabric ja Power BI.</p>
-                <p>Vapaa-ajallani pelaan jalkapalloa ja lautapelejä sekä boulderoin.</p>
+        <section class="paneeli" id="projects" aria-labelledby="projects-otsikko">
+            <div class="paneeli__sisus">
+                <nav class="ylapalkki" aria-label="Sections">
+                    <ul class="linkit">
+                        <li><a href="#home">Joel Oranen</a></li>
+                        <li><a href="#projects" aria-current="location">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#cv">CV</a></li>
+                    </ul>
+                </nav>
+
+                <h2 id="projects-otsikko">Projects</h2>
+
+                <h3>Data</h3>
+                <ul class="rivit">
+                    <li>
+                        <p class="rivit__otsikko"><a href="https://github.com/jtnOranen/energy-data-platform">Energy data platform</a>
+                            <span class="rivit__aika">2026</span></p>
+                        <p>How do wind power and weather show up in the Finnish day-ahead electricity price? To find
+                            out, I built an end-to-end data platform on Azure and Databricks: ingestion from three open
+                            APIs, lakehouse layers, dbt models and infrastructure as code. Wind explains up to two
+                            fifths of the variation in the price. Built with Terraform, Azure, Databricks, dbt and
+                            GitHub Actions.</p>
+                    </li>
+                    <li>
+                        <p class="rivit__otsikko"><a href="https://github.com/jtnOranen/Bookies-odds-etl">Betting odds and match results</a>
+                            <span class="rivit__aika">2025</span></p>
+                        <p>How well do bookmakers’ odds match the actual results of football matches? An ETL practice
+                            project that fetches and cleans match data, loads it into PostgreSQL, moves it to BigQuery
+                            and reports on it in Power BI. Built with Python, PostgreSQL, BigQuery and Power BI.</p>
+                    </li>
+                    <li>
+                        <p class="rivit__otsikko"><a href="https://github.com/jtnOranen/Plant_companions">Companion planting</a>
+                            <span class="rivit__aika">2025</span></p>
+                        <p>An app that places the vegetables you pick on a garden grid using a simple scoring of which
+                            plants grow well together. Built with Python and Streamlit.</p>
+                    </li>
+                </ul>
+
+                <h3>Research and foresight</h3>
+                <ul class="rivit">
+                    <li>
+                        <p class="rivit__otsikko"><a href="https://www.utupub.fi/handle/10024/174286">Master’s thesis</a>
+                            <span class="rivit__aika">2023</span></p>
+                        <p><cite>Pioneering spirit and village community of the future: Images of the future of church
+                                members of Jätkäsaari in the year 2040.</cite> I ran a workshop for members of the
+                            Jätkäsaari parish where we sketched desirable futures for the district and the trends that
+                            support or threaten them.</p>
+                    </li>
+                    <li>
+                        <p class="rivit__otsikko">Foresight projects at KONE <span class="rivit__aika">2022–2024</span></p>
+                        <p>Interviews and analysis for the Future of Living and Future of Mobility and Mobility Hubs
+                            projects, and a foresight playbook for the strategy and innovation teams that introduces
+                            the key methods of futures research from a business point of view.</p>
+                    </li>
+                    <li>
+                        <p class="rivit__otsikko">Crown Bridges systems analysis</p>
+                        <p>A short study of how building the Crown Bridges tramway affects traffic flows in Helsinki,
+                            especially on the metro.</p>
+                    </li>
+                    <li>
+                        <p class="rivit__otsikko">Bachelor’s thesis <span class="rivit__aika">2020</span></p>
+                        <p>Sustainability reports as a tool for customer dialogue: the case of Paulig. A content
+                            analysis of Paulig’s sustainability reports and their role in consumer communication.</p>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section class="osio" id="projektit" aria-labelledby="projektit-otsikko">
-            <h2 id="projektit-otsikko">Projektit</h2>
-            <div class="osio__sisalto">
-                <h3>Dataprojektit</h3>
+        <section class="paneeli" id="experience" aria-labelledby="experience-otsikko">
+            <div class="paneeli__sisus">
+                <nav class="ylapalkki" aria-label="Sections">
+                    <ul class="linkit">
+                        <li><a href="#home">Joel Oranen</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience" aria-current="location">Experience</a></li>
+                        <li><a href="#cv">CV</a></li>
+                    </ul>
+                </nav>
 
-                <article class="projekti">
-                    <h4>Energiadata-alusta <span class="projekti__vuosi">2026</span></h4>
-                    <p>Miten tuulivoima ja sää näkyvät Suomen sähkön vuorokausihinnassa? Rakensin vastausta varten
-                        kokonaisen data-alustan Azureen ja Databricksiin: datan haku kolmesta avoimesta rajapinnasta,
-                        lakehouse-kerrokset, dbt-mallinnus ja infrastruktuuri koodina. Tuuli selittää jopa kaksi
-                        viidesosaa hinnan vaihtelusta.</p>
-                    <p class="projekti__tiedot">Tekniikat: Terraform, Azure, Databricks, dbt ja GitHub Actions.
-                        <a href="https://github.com/jtnOranen/energy-data-platform">Lähdekoodi GitHubissa</a></p>
-                </article>
+                <h2 id="experience-otsikko">Experience</h2>
 
-                <article class="projekti">
-                    <h4>Vedonlyöntikertoimet ja ottelutulokset <span class="projekti__vuosi">2025</span></h4>
-                    <p>Kuinka hyvin vedonvälittäjien kertoimet vastaavat jalkapallo-otteluiden todellisia tuloksia?
-                        ETL-harjoitusprojekti, jossa otteludata haetaan ja esikäsitellään, ladataan PostgreSQL:ään,
-                        siirretään BigQueryyn ja raportoidaan Power BI:ssä.</p>
-                    <p class="projekti__tiedot">Tekniikat: Python, PostgreSQL, BigQuery ja Power BI.
-                        <a href="https://github.com/jtnOranen/Bookies-odds-etl">Lähdekoodi GitHubissa</a></p>
-                </article>
-
-                <article class="projekti">
-                    <h4>Kasvimaan seuralaiskasvit <span class="projekti__vuosi">2025</span></h4>
-                    <p>Sovellus ehdottaa käyttäjän valitsemille vihanneksille paikat kasvimaan ruudukossa yksinkertaisen
-                        pisteytyksen perusteella.</p>
-                    <p class="projekti__tiedot">Tekniikat: Python ja Streamlit.
-                        <a href="https://github.com/jtnOranen/Plant_companions">Lähdekoodi GitHubissa</a></p>
-                </article>
-
-                <h3>Tutkimus ja ennakointi</h3>
-
-                <article class="projekti">
-                    <h4><a href="https://www.utupub.fi/handle/10024/174286">Pro gradu</a>
-                        <span class="projekti__vuosi">2023</span></h4>
-                    <p><cite lang="en">Pioneering spirit and village community of the future: Images of the future of
-                            church members of Jätkäsaari in the year 2040.</cite> Vedin Jätkäsaaren seurakunnan
-                        jäsenille työpajan, jossa hahmottelimme kaupunginosan toivottuja tulevaisuuskuvia sekä niitä
-                        tukevia ja uhkaavia trendejä.</p>
-                </article>
-
-                <article class="projekti">
-                    <h4>Ennakointiprojektit KONEella <span class="projekti__vuosi">2022–2024</span></h4>
-                    <p>Future of Living- ja Future of Mobility and Mobility Hubs -projektien haastattelut ja analyysit
-                        sekä ennakoinnin pelikirja strategia- ja innovaatiotiimeille. Pelikirja esittelee
-                        tulevaisuudentutkimuksen keskeiset menetelmät liiketoiminnan näkökulmasta.</p>
-                </article>
-
-                <article class="projekti">
-                    <h4>Kruunusiltojen systeemianalyysi</h4>
-                    <p>Lyhyt tutkimus siitä, miten Kruunusiltojen rakentaminen vaikuttaa Helsingin liikennevirtoihin ja
-                        erityisesti metroliikenteeseen.</p>
-                </article>
-
-                <article class="projekti">
-                    <h4>Kandidaatintutkielma <span class="projekti__vuosi">2020</span></h4>
-                    <p>Vastuullisuusraportti asiakasdialogin välineenä: case Paulig. Sisällönanalyysi Pauligin
-                        vastuullisuusraporteista ja niiden roolista kuluttajaviestinnässä.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="osio" id="kokemus" aria-labelledby="kokemus-otsikko">
-            <h2 id="kokemus-otsikko">Kokemus</h2>
-            <div class="osio__sisalto">
-                <h3>Työ</h3>
-                <ol class="aikajana aikajana--jatkuu">
-                    <li class="nyt">
-                        <p class="aikajana__aika">2026–nyt</p>
-                        <h4>Data Engineer, Cloud2</h4>
-                        <p>Rakennan yritysasiakkaille data-alustoja ja dataputkia pilveen.</p>
+                <h3>Work</h3>
+                <ul class="rivit">
+                    <li>
+                        <p class="rivit__otsikko">Data Engineer, Cloud2 <span class="rivit__aika">2026–now</span></p>
+                        <p>I build data platforms and pipelines in the cloud for enterprise clients.</p>
                     </li>
                     <li>
-                        <p class="aikajana__aika">2024–2026</p>
-                        <h4>Data Engineer, Skillio</h4>
-                        <p>Kehitin tekoälypohjaista apuopettajaa Skillion koulutusohjelman oppijoille: muunsin sisäistä
-                            tekstidataa sopiviin muotoihin, keräsin lisämateriaalia julkisista verkkolähteistä sekä
-                            mallinsin ja visualisoin yrityksen tietokantoja. Rakensin dataputkia Pythonilla ja
-                            raportointia Googlen pilvipalveluihin.</p>
+                        <p class="rivit__otsikko">Data Engineer, Skillio <span class="rivit__aika">2024–2026</span></p>
+                        <p>I worked on an AI teaching assistant for the learners in Skillio’s training programme:
+                            converting internal text data into usable formats, collecting extra material from public
+                            web sources, and modelling and visualising the company’s databases. I built data pipelines
+                            in Python and reporting on Google Cloud.</p>
                     </li>
                     <li>
-                        <p class="aikajana__aika">2022–2024</p>
-                        <h4>Foresight Specialist, KONE</h4>
-                        <p>Kehitin yhtiön ennakointiprosessia ja kirjoitin ennakoinnin pelikirjan strategia- ja
-                            innovaatiotiimeille. Haastattelin asiantuntijoita ja analysoin aineistoja
-                            ennakointiprojekteissa, ylläpidin ennakointialustaa ja järjestin neljännesvuosittaisen
-                            Foresight Friday -tilaisuuden.</p>
+                        <p class="rivit__otsikko">Foresight Specialist, KONE <span class="rivit__aika">2022–2024</span></p>
+                        <p>I developed the company’s foresight process and wrote a foresight playbook for the strategy
+                            and innovation teams. I interviewed experts and analysed material in foresight projects,
+                            maintained the foresight platform and hosted the quarterly Foresight Friday.</p>
                     </li>
                     <li>
-                        <p class="aikajana__aika">2021</p>
-                        <h4>Foresight Trainee, Futures Platform</h4>
-                        <p>Kirjoitin kuvauksia tulevaisuuden ilmiöistä ja kehityskuluista ja avustin asiakastyöpajoissa.
-                        </p>
+                        <p class="rivit__otsikko">Foresight Trainee, Futures Platform <span class="rivit__aika">2021</span></p>
+                        <p>I wrote descriptions of future phenomena and trends and helped run client workshops.</p>
                     </li>
-                </ol>
+                </ul>
 
-                <details class="lisaa">
-                    <summary>Muut työt</summary>
-                    <ul class="lista">
-                        <li><strong>Asiakaspalvelija, Posti</strong> (2021–2022). Asiakaspalvelua ja myyntiä Helsingin
-                            keskustassa. Olin etulinjassa käsittelemässä palautetta, niin hyvässä kuin pahassa.</li>
-                        <li><strong>Myyntiedustaja, Nordic Sales Crew</strong> (2021). ASICSin tuotteiden asiantuntija
-                            urheiluliikkeessä.</li>
-                        <li><strong>Kirjastoapulainen, Helsingin yliopiston kirjasto.</strong> Siviilipalvelus:
-                            asiakaspalvelua, hyllytystä, organisointia ja asiakastietokannan ylläpitoa.</li>
+                <details>
+                    <summary>Other work</summary>
+                    <ul class="rivit">
+                        <li><p><span class="rivit__otsikko">Customer service, Posti</span> (2021–2022). Customer
+                            service and sales in central Helsinki, on the front line for feedback, good and bad.</p></li>
+                        <li><p><span class="rivit__otsikko">Sales representative, Nordic Sales Crew</span> (2021). ASICS
+                            product specialist in a sports store.</p></li>
+                        <li><p><span class="rivit__otsikko">Library assistant, University of Helsinki Library.</span>
+                            Civilian service: customer service, shelving, organising and keeping the customer database
+                            up to date.</p></li>
                     </ul>
                 </details>
 
-                <details class="lisaa">
-                    <summary>Asennetta kasvattavat työt</summary>
-                    <ul class="lista">
-                        <li><strong>Joulukuusimyyjä, Havunen.</strong> Räntäsade Citymarketin parkkipaikalla kasvatti
-                            luonnetta. Sesongin iloiset asiakkaat ja Havusen tukeva tiimi toivat energiaa.</li>
-                        <li><strong>Yöjakelija, Posti.</strong> Jaoin Helsingin Sanomia Itä-Helsingin yössä. Fyysinen
-                            työ opetti paljon sitkeydestä ja aerobisen liikunnan tärkeydestä.</li>
-                        <li><strong>F2F-varainhankkija, Suomen Punainen Risti.</strong> Kun onnistumisprosentti on
-                            tilastollisesti pieni, oppii pitkäjänteisyyttä ja suhtautumaan epäonnistumisiin
-                            rakentavasti.</li>
+                <details>
+                    <summary>Character-building jobs</summary>
+                    <ul class="rivit">
+                        <li><p><span class="rivit__otsikko">Christmas tree seller, Havunen.</span> Sleet in a
+                            supermarket car park built character. Cheerful seasonal customers and a supportive team
+                            kept the energy up.</p></li>
+                        <li><p><span class="rivit__otsikko">Night newspaper carrier, Posti.</span> I delivered Helsingin
+                            Sanomat through the East Helsinki night. Physical work taught me a lot about persistence
+                            and the value of cardio.</p></li>
+                        <li><p><span class="rivit__otsikko">Face-to-face fundraiser, Finnish Red Cross.</span> When the
+                            success rate is statistically low, you learn patience and to take failure
+                            constructively.</p></li>
                     </ul>
                 </details>
 
-                <h3>Koulutus</h3>
-                <ol class="aikajana">
+                <h3>Education</h3>
+                <ul class="rivit">
                     <li>
-                        <p class="aikajana__aika">2024</p>
-                        <h4>Data engineer -koulutusohjelma, Skillio</h4>
-                        <p>Azure, Python, SQL ja tietokannat sekä ETL-putkien rakentaminen Pythonilla ja Azuren
-                            työkaluilla.</p>
+                        <p class="rivit__otsikko">Data engineer training programme, Skillio <span class="rivit__aika">2024</span></p>
+                        <p>Azure, Python, SQL and databases, and building ETL pipelines with Python and Azure tools.</p>
                     </li>
                     <li>
-                        <p class="aikajana__aika">2020–2023</p>
-                        <h4>Valtiotieteiden maisteri, Turun yliopisto</h4>
-                        <p>Pääaineena tulevaisuudentutkimus ja sivuaineena vastuullinen liiketoiminta. Keskityin
-                            strategiseen ennakointiin.</p>
+                        <p class="rivit__otsikko">Master of Social Sciences, University of Turku <span class="rivit__aika">2020–2023</span></p>
+                        <p>Futures studies, with responsible business as a minor. I focused on strategic foresight.</p>
                     </li>
                     <li>
-                        <p class="aikajana__aika">2015–2020</p>
-                        <h4>Kauppatieteiden kandidaatti, Tampereen yliopisto</h4>
-                        <p>Pääaineena yrityksen johtaminen ja sivuaineena vastuullinen liiketoiminta.</p>
+                        <p class="rivit__otsikko">Bachelor of Business Administration, Tampere University <span class="rivit__aika">2015–2020</span></p>
+                        <p>Management, with responsible business as a minor.</p>
                     </li>
-                </ol>
+                </ul>
+
+                <p class="tausta">Outside work I play football and board games, and I boulder.</p>
             </div>
         </section>
 
-        <section class="osio" id="cv" aria-labelledby="cv-otsikko">
-            <h2 id="cv-otsikko">CV</h2>
-            <div class="osio__sisalto">
-                <p>Lataa CV PDF-tiedostona suomeksi tai englanniksi.</p>
-                <p class="napit">
-                    <a class="nappi nappi--ensisijainen" href="cv_Suomi.pdf">CV suomeksi (PDF)</a>
-                    <a class="nappi nappi--toissijainen" href="cv_English.pdf" hreflang="en" lang="en">CV in English (PDF)</a>
-                </p>
-            </div>
-        </section>
+        <section class="paneeli" id="cv" aria-labelledby="cv-otsikko">
+            <div class="paneeli__sisus">
+                <nav class="ylapalkki" aria-label="Sections">
+                    <ul class="linkit">
+                        <li><a href="#home">Joel Oranen</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#cv" aria-current="location">CV</a></li>
+                    </ul>
+                </nav>
 
-        <section class="osio englanniksi" id="in-english" lang="en" aria-labelledby="en-otsikko">
-            <h2 id="en-otsikko">In English</h2>
-            <div class="osio__sisalto">
-                <p>I’m a data engineer with a background in business and strategic foresight. I work at Cloud2, where
-                    I build data platforms and pipelines in the cloud for enterprise clients. Before that, I built
-                    data pipelines and reporting at Skillio and developed strategic foresight at KONE.</p>
-                <p>My latest side project is an end-to-end energy data platform on Azure and Databricks, built with
-                    Terraform, dbt and GitHub Actions. It shows that wind explains up to two fifths of the variation
-                    in the Finnish day-ahead electricity price.</p>
-                <p><a href="cv_English.pdf">Download my CV in English (PDF)</a></p>
+                <h2 id="cv-otsikko">CV</h2>
+                <p>I’m a data engineer with a background in business and strategic foresight. I combine technical
+                    skills with an understanding of what the business needs data for.</p>
+                <p>The tools I know best are Python, SQL, Azure, Databricks, dbt, Terraform, GitHub Actions,
+                    BigQuery, Microsoft Fabric and Power BI.</p>
+                <p>Download my CV in <a href="cv_English.pdf">English</a> or
+                    <a href="cv_Suomi.pdf" hreflang="fi">Finnish</a> (PDF), or get in touch by
+                    <a href="mailto:joel.oranen@gmail.com">email</a>, on
+                    <a href="https://www.linkedin.com/in/joeloranen/">LinkedIn</a> or on
+                    <a href="https://github.com/jtnOranen">GitHub</a>.</p>
+
+                <p class="alapalkki">Made with HTML and CSS, no frameworks. © 2026 Joel Oranen</p>
             </div>
         </section>
     </main>
 
-    <footer class="alapalkki">
-        <div class="osio" id="yhteys">
-            <h2>Ota yhteyttä</h2>
-            <div class="osio__sisalto">
-                <ul class="yhteystiedot">
-                    <li><a href="mailto:joel.oranen@gmail.com">joel.oranen@gmail.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/joeloranen/">LinkedIn</a></li>
-                    <li><a href="https://github.com/jtnOranen">GitHub</a></li>
-                </ul>
-                <p class="alapalkki__huomautus">Tehty HTML:llä ja CSS:llä ilman kehyksiä. © 2026 Joel Oranen</p>
-            </div>
-        </div>
-    </footer>
+    <script>
+        // A vertical mouse wheel cannot scroll the row of panels sideways, so when the current
+        // panel has nothing left to scroll, the wheel moves to the next or previous panel.
+        // Arrow keys do the same. Without this script the links and swiping still work.
+        (function () {
+            var rivi = document.querySelector(".paneelit");
+            var paneelit = rivi.querySelectorAll(".paneeli");
+            // One wheel gesture is a run of events less than 250 ms apart. A gesture can change
+            // the panel once, and not at all if it scrolled the panel itself first.
+            var edellinen = 0;
+            var sisalla = false;
+            var kaytetty = false;
+            var kertyma = 0;
+
+            function nykyinen() {
+                return Math.round(rivi.scrollLeft / rivi.clientWidth);
+            }
+
+            function siirry(suunta) {
+                var i = Math.min(Math.max(nykyinen() + suunta, 0), paneelit.length - 1);
+                if (i === nykyinen()) return;
+                rivi.scrollTo({ left: i * rivi.clientWidth });
+                history.replaceState(null, "", "#" + paneelit[i].id);
+            }
+
+            rivi.addEventListener("wheel", function (e) {
+                if (e.ctrlKey || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+                var nyt = Date.now();
+                if (nyt - edellinen > 250) {
+                    sisalla = false;
+                    kaytetty = false;
+                    kertyma = 0;
+                }
+                edellinen = nyt;
+                if (kaytetty) {
+                    e.preventDefault();
+                    return;
+                }
+                var paneeli = paneelit[nykyinen()];
+                var alas = e.deltaY > 0;
+                var tilaa = alas
+                    ? paneeli.scrollTop + paneeli.clientHeight < paneeli.scrollHeight - 1
+                    : paneeli.scrollTop > 0;
+                if (tilaa) {
+                    sisalla = true;
+                    return;
+                }
+                e.preventDefault();
+                if (sisalla) return;
+                kertyma += e.deltaY;
+                if (Math.abs(kertyma) < 40) return;
+                kaytetty = true;
+                siirry(alas ? 1 : -1);
+            }, { passive: false });
+
+            document.addEventListener("keydown", function (e) {
+                if (e.altKey || e.ctrlKey || e.metaKey) return;
+                if (e.key === "ArrowRight") siirry(1);
+                if (e.key === "ArrowLeft") siirry(-1);
+            });
+        })();
+    </script>
 </body>
 
 </html>
