@@ -106,17 +106,16 @@
         </section>
 
         <section class="paneeli" id="projects" aria-labelledby="projects-otsikko">
+            <nav class="ylapalkki" aria-label="Sections">
+                <ul class="linkit">
+                    <li><a href="#home">me</a></li>
+                    <li><a href="#projects" aria-current="location">projects</a></li>
+                    <li><a href="#experience">experience</a></li>
+                    <li><a href="#cv">cv</a></li>
+                </ul>
+            </nav>
             <div class="paneeli__sisus">
-                <nav class="ylapalkki" aria-label="Sections">
-                    <ul class="linkit">
-                        <li><a href="#home">Joel Oranen</a></li>
-                        <li><a href="#projects" aria-current="location">Projects</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#cv">CV</a></li>
-                    </ul>
-                </nav>
-
-                <h2 id="projects-otsikko">Projects</h2>
+                <h2 id="projects-otsikko" class="piilotettu">Projects</h2>
 
                 <h3>Data</h3>
                 <ul class="rivit">
@@ -128,19 +127,6 @@
                             APIs, lakehouse layers, dbt models and infrastructure as code. Wind explains up to two
                             fifths of the variation in the price. Built with Terraform, Azure, Databricks, dbt and
                             GitHub Actions.</p>
-                    </li>
-                    <li>
-                        <p class="rivit__otsikko"><a href="https://github.com/jtnOranen/Bookies-odds-etl">Betting odds and match results</a>
-                            <span class="rivit__aika">2025</span></p>
-                        <p>How well do bookmakers’ odds match the actual results of football matches? An ETL practice
-                            project that fetches and cleans match data, loads it into PostgreSQL, moves it to BigQuery
-                            and reports on it in Power BI. Built with Python, PostgreSQL, BigQuery and Power BI.</p>
-                    </li>
-                    <li>
-                        <p class="rivit__otsikko"><a href="https://github.com/jtnOranen/Plant_companions">Companion planting</a>
-                            <span class="rivit__aika">2025</span></p>
-                        <p>An app that places the vegetables you pick on a garden grid using a simple scoring of which
-                            plants grow well together. Built with Python and Streamlit.</p>
                     </li>
                 </ul>
 
@@ -160,73 +146,77 @@
                             projects, and a foresight playbook for the strategy and innovation teams that introduces
                             the key methods of futures research from a business point of view.</p>
                     </li>
-                    <li>
-                        <p class="rivit__otsikko">Crown Bridges systems analysis</p>
-                        <p>A short study of how building the Crown Bridges tramway affects traffic flows in Helsinki,
-                            especially on the metro.</p>
-                    </li>
-                    <li>
-                        <p class="rivit__otsikko">Bachelor’s thesis <span class="rivit__aika">2020</span></p>
-                        <p>Sustainability reports as a tool for customer dialogue: the case of Paulig. A content
-                            analysis of Paulig’s sustainability reports and their role in consumer communication.</p>
-                    </li>
                 </ul>
             </div>
         </section>
 
         <section class="paneeli" id="experience" aria-labelledby="experience-otsikko">
+            <nav class="ylapalkki" aria-label="Sections">
+                <ul class="linkit">
+                    <li><a href="#home">me</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#experience" aria-current="location">experience</a></li>
+                    <li><a href="#cv">cv</a></li>
+                </ul>
+            </nav>
             <div class="paneeli__sisus">
-                <nav class="ylapalkki" aria-label="Sections">
-                    <ul class="linkit">
-                        <li><a href="#home">Joel Oranen</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#experience" aria-current="location">Experience</a></li>
-                        <li><a href="#cv">CV</a></li>
-                    </ul>
-                </nav>
-
-                <h2 id="experience-otsikko">Experience</h2>
+                <h2 id="experience-otsikko" class="piilotettu">Experience</h2>
 
                 <h3>Work</h3>
                 <ul class="rivit">
                     <li>
-                        <p class="rivit__otsikko">Data Engineer, Cloud2 <span class="rivit__aika">2026–now</span></p>
-                        <p>I build data platforms and pipelines in the cloud for enterprise clients.</p>
+                        <details open>
+                            <summary class="rivit__otsikko">Data Engineer, Cloud2 <span class="rivit__aika">2026–now</span></summary>
+                            <p>I build data platforms and pipelines in the cloud for enterprise clients.</p>
+                        </details>
                     </li>
                     <li>
-                        <p class="rivit__otsikko">Data Engineer, Skillio <span class="rivit__aika">2024–2026</span></p>
-                        <p>I worked on an AI teaching assistant for the learners in Skillio’s training programme:
-                            converting internal text data into usable formats, collecting extra material from public
-                            web sources, and modelling and visualising the company’s databases. I built data pipelines
-                            in Python and reporting on Google Cloud.</p>
+                        <details>
+                            <summary class="rivit__otsikko">Data Engineer, Skillio <span class="rivit__aika">2024–2026</span></summary>
+                            <p>I worked on an AI teaching assistant for the learners in Skillio’s training programme:
+                                converting internal text data into usable formats, collecting extra material from public
+                                web sources, and modelling and visualising the company’s databases. I built data pipelines
+                                in Python and reporting on Google Cloud.</p>
+                        </details>
                     </li>
                     <li>
-                        <p class="rivit__otsikko">Foresight Specialist, KONE <span class="rivit__aika">2022–2024</span></p>
-                        <p>I developed the company’s foresight process and wrote a foresight playbook for the strategy
-                            and innovation teams. I interviewed experts and analysed material in foresight projects,
-                            maintained the foresight platform and hosted the quarterly Foresight Friday.</p>
+                        <details>
+                            <summary class="rivit__otsikko">Foresight Specialist, KONE <span class="rivit__aika">2022–2024</span></summary>
+                            <p>I developed the company’s foresight process and wrote a foresight playbook for the strategy
+                                and innovation teams. I interviewed experts and analysed material in foresight projects,
+                                maintained the foresight platform and hosted the quarterly Foresight Friday.</p>
+                        </details>
                     </li>
                     <li>
-                        <p class="rivit__otsikko">Foresight Trainee, Futures Platform <span class="rivit__aika">2021</span></p>
-                        <p>I wrote descriptions of future phenomena and trends and helped run client workshops.</p>
+                        <details>
+                            <summary class="rivit__otsikko">Foresight Trainee, Futures Platform <span class="rivit__aika">2021</span></summary>
+                            <p>I wrote descriptions of future phenomena and trends and helped run client workshops.</p>
+                        </details>
                     </li>
                 </ul>
 
                 <details>
                     <summary>Other work</summary>
                     <ul class="rivit">
-                        <li><p><span class="rivit__otsikko">Customer service, Posti</span> (2021–2022). Customer
-                            service and sales in central Helsinki, on the front line for feedback, good and bad.</p></li>
-                        <li><p><span class="rivit__otsikko">Sales representative, Nordic Sales Crew</span> (2021). ASICS
-                            product specialist in a sports store.</p></li>
-                        <li><p><span class="rivit__otsikko">Library assistant, University of Helsinki Library.</span>
-                            Civilian service: customer service, shelving, organising and keeping the customer database
-                            up to date.</p></li>
+                        <li>
+                            <p class="rivit__otsikko">Customer service, Posti <span class="rivit__aika">2021–2022</span></p>
+                            <p>Customer service and sales in central Helsinki, on the front line for feedback, good
+                                and bad.</p>
+                        </li>
+                        <li>
+                            <p class="rivit__otsikko">Sales representative, Nordic Sales Crew <span class="rivit__aika">2021</span></p>
+                            <p>ASICS product specialist in a sports store.</p>
+                        </li>
+                        <li>
+                            <p class="rivit__otsikko">Library assistant, University of Helsinki Library</p>
+                            <p>Civilian service: customer service, shelving, organising and keeping the customer
+                                database up to date.</p>
+                        </li>
                     </ul>
                 </details>
 
                 <details>
-                    <summary>Character-building jobs</summary>
+                    <summary>Character-building work</summary>
                     <ul class="rivit">
                         <li><p><span class="rivit__otsikko">Christmas tree seller, Havunen.</span> Sleet in a
                             supermarket car park built character. Cheerful seasonal customers and a supportive team
@@ -243,46 +233,39 @@
                 <h3>Education</h3>
                 <ul class="rivit">
                     <li>
-                        <p class="rivit__otsikko">Data engineer training programme, Skillio <span class="rivit__aika">2024</span></p>
-                        <p>Azure, Python, SQL and databases, and building ETL pipelines with Python and Azure tools.</p>
+                        <details>
+                            <summary class="rivit__otsikko">Data engineer training programme, Skillio <span class="rivit__aika">2024</span></summary>
+                            <p>Azure, Python, SQL and databases, and building ETL pipelines with Python and Azure tools.</p>
+                        </details>
                     </li>
                     <li>
-                        <p class="rivit__otsikko">Master of Social Sciences, University of Turku <span class="rivit__aika">2020–2023</span></p>
-                        <p>Futures studies, with responsible business as a minor. I focused on strategic foresight.</p>
+                        <details>
+                            <summary class="rivit__otsikko">Master of Social Sciences, University of Turku <span class="rivit__aika">2020–2023</span></summary>
+                            <p>Futures studies, with responsible business as a minor. I focused on strategic foresight.</p>
+                        </details>
                     </li>
                     <li>
-                        <p class="rivit__otsikko">Bachelor of Business Administration, Tampere University <span class="rivit__aika">2015–2020</span></p>
-                        <p>Management, with responsible business as a minor.</p>
+                        <details>
+                            <summary class="rivit__otsikko">Bachelor of Business Administration, Tampere University <span class="rivit__aika">2015–2020</span></summary>
+                            <p>Business administration, focus on leadership and management, minoring in responsible business.</p>
+                        </details>
                     </li>
                 </ul>
-
-                <p class="tausta">Outside work I play football and board games, and I boulder.</p>
             </div>
         </section>
 
         <section class="paneeli" id="cv" aria-labelledby="cv-otsikko">
+            <nav class="ylapalkki" aria-label="Sections">
+                <ul class="linkit">
+                    <li><a href="#home">me</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#experience">experience</a></li>
+                    <li><a href="#cv" aria-current="location">cv</a></li>
+                </ul>
+            </nav>
             <div class="paneeli__sisus">
-                <nav class="ylapalkki" aria-label="Sections">
-                    <ul class="linkit">
-                        <li><a href="#home">Joel Oranen</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#cv" aria-current="location">CV</a></li>
-                    </ul>
-                </nav>
-
-                <h2 id="cv-otsikko">CV</h2>
-                <p>I’m a data engineer with a background in business and strategic foresight. I combine technical
-                    skills with an understanding of what the business needs data for.</p>
-                <p>The tools I know best are Python, SQL, Azure, Databricks, dbt, Terraform, GitHub Actions,
-                    BigQuery, Microsoft Fabric and Power BI.</p>
-                <p>Download my CV in <a href="cv_English.pdf">English</a> or
-                    <a href="cv_Suomi.pdf" hreflang="fi">Finnish</a> (PDF), or get in touch by
-                    <a href="mailto:joel.oranen@gmail.com">email</a>, on
-                    <a href="https://www.linkedin.com/in/joeloranen/">LinkedIn</a> or on
-                    <a href="https://github.com/jtnOranen">GitHub</a>.</p>
-
-                <p class="alapalkki">Made with HTML and CSS, no frameworks. © 2026 Joel Oranen</p>
+                <h2 id="cv-otsikko" class="piilotettu">CV</h2>
+                <p><a href="cv_English.pdf">English</a> or <a href="cv_Suomi.pdf" hreflang="fi">Finnish</a></p>
             </div>
         </section>
     </main>

@@ -158,11 +158,22 @@ cite {
     color: var(--toissijainen);
 }
 
+/* Osioiden linkit: kapealla näytöllä rivinä ylhäällä, leveällä allekkain vasemmassa laidassa
+   pystysuunnassa keskellä.
+   Nykyisen osion linkki on lihavoitu. */
 .ylapalkki {
-    margin-bottom: 3rem;
+    max-width: 42rem;
+    padding: var(--reunus) var(--reunus) 0;
+    font-size: 0.875rem;
+}
+
+.ylapalkki .linkit {
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--viiva);
-    font-size: 0.875rem;
+}
+
+.ylapalkki + .paneeli__sisus {
+    padding-top: 3rem;
 }
 
 .ylapalkki a {
@@ -173,6 +184,51 @@ cite {
 .ylapalkki a:hover,
 .ylapalkki a[aria-current] {
     color: var(--otsikko);
+}
+
+.ylapalkki a[aria-current] {
+    font-weight: 600;
+}
+
+@media (min-width: 64rem) {
+    .paneeli:has(> .ylapalkki) {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .ylapalkki {
+        position: sticky;
+        top: 0;
+        display: flex;
+        align-items: center;
+        flex: 0 0 max(12vw, 9.5rem);
+        height: 100vh;
+        height: 100dvh;
+        padding: var(--reunus) 0 var(--reunus) var(--reunus);
+    }
+
+    .ylapalkki .linkit {
+        flex-direction: column;
+        gap: 0.25rem;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .ylapalkki + .paneeli__sisus {
+        flex: 1 1 auto;
+        margin-left: 0;
+        padding-top: var(--reunus);
+    }
+}
+
+/* Otsikko on ruudunlukijoita varten, mutta sitä ei näytetä. */
+.piilotettu {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
 }
 
 /* Etusivu */
@@ -304,14 +360,40 @@ details[open] summary {
     margin-bottom: 1rem;
 }
 
-.tausta {
-    margin-top: 2.5rem;
+/* Työ- ja koulutusrivit: otsikkorivi näkyy, kuvaus aukeaa klikkaamalla. */
+.rivit details {
+    margin-top: 0;
 }
 
-.alapalkki {
-    margin-top: 4rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--viiva);
+.rivit summary.rivit__otsikko {
+    color: var(--otsikko);
+}
+
+.rivit summary::marker {
     color: var(--toissijainen);
-    font-size: 0.875rem;
+}
+
+.rivit details[open] summary {
+    margin-bottom: 0.25rem;
+}
+
+.rivit li:has(> details) + li {
+    margin-top: 0.75rem;
+}
+
+/* Matalalla tai kapealla näytöllä välit ovat tiiviimmät, jotta sisältöpaneelit mahtuvat ruutuun
+   ilman vieritystä. Etusivuun tämä ei vaikuta. */
+@media (max-height: 50rem), (max-width: 40rem) {
+    .ylapalkki + .paneeli__sisus {
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    h3 {
+        margin: 1.5rem 0 0.75rem;
+    }
+
+    .rivit li + li {
+        margin-top: 1rem;
+    }
 }
