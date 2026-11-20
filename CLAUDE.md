@@ -27,7 +27,7 @@ Work history, education and projects appear in `index.html` (the Projects and Ex
 
 The CVs list only email, LinkedIn, GitHub and the site. Do not add a phone number, home address or birth date; the old Canva CV that used to be published here exposed them.
 
-`cv.html` and `portfolio.html` are meta-refresh redirects to `index.html#experience` and `#projects`, kept so that old links keep working. The CVs link to `#projects`. The script also maps the old hashes `#home`, `#me`, `#questions`, `#background` and `#cv` to the right side.
+`cv.html` and `portfolio.html` are meta-refresh redirects to `index.html#experience` and `#projects`, kept so that old links keep working. The CVs link to `#projects`. The script also maps the old hashes `#home`, `#me`, `#questions`, `#background`, `#cv` and those of the October 2026 design (`#now`, `#next`, `#someday`, `#contact`, `#content`) to the right side.
 
 ## Styling
 

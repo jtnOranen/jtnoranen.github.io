@@ -6,7 +6,7 @@ Sivusto on puhdasta HTML:ää ja CSS:ää ilman build-vaihetta. GitHub Pages jul
 
 ## Rakenne
 
-- `index.html` ja `style.css`: koko sivusto yhdellä sivulla
+- `index.html` ja `style.css`: koko sivusto yhdellä englanninkielisellä sivulla, kolmisärmiö jonka sivut ovat Joel Oranen, Projects ja Experience
 - `img/`: valokuva JPEG- ja WebP-muodossa, jakokuva `og-image.jpg` ja CV-kuva
 - `cv/`: CV:iden lähdesivut, joista PDF:t tulostetaan
 - `cv_Suomi.pdf` ja `cv_English.pdf`: ladattavat CV:t
