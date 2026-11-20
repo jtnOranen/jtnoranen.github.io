@@ -1,337 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Joel Oranen – Data engineer</title>
-    <meta name="description" content="Joel Oranen is a data engineer with a background in business and strategic foresight. Projects, experience and CV.">
-    <link rel="canonical" href="https://jtnoranen.github.io/">
-    <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#16191d" media="(prefers-color-scheme: dark)">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joel Oranen – Data engineer</title>
+<meta name="description" content="Joel Oranen, data engineer. I build data pipelines people can trust.">
+<link rel="canonical" href="https://jtnoranen.github.io/">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#F3F4F6">
 
-    <meta property="og:type" content="profile">
-    <meta property="og:locale" content="en_GB">
-    <meta property="og:site_name" content="Joel Oranen">
-    <meta property="og:title" content="Joel Oranen – Data engineer">
-    <meta property="og:description" content="Data engineer with a background in business and strategic foresight. Projects, experience and CV.">
-    <meta property="og:url" content="https://jtnoranen.github.io/">
-    <meta property="og:image" content="https://jtnoranen.github.io/img/og-image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Joel Oranen">
-    <meta property="profile:first_name" content="Joel">
-    <meta property="profile:last_name" content="Oranen">
-    <meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Joel Oranen">
+<meta property="og:title" content="Joel Oranen – Data engineer">
+<meta property="og:description" content="I build data pipelines people can trust. Data engineer with a background in business and futures studies.">
+<meta property="og:url" content="https://jtnoranen.github.io/">
+<meta property="og:image" content="https://jtnoranen.github.io/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Joel Oranen">
+<meta property="profile:first_name" content="Joel">
+<meta property="profile:last_name" content="Oranen">
+<meta name="twitter:card" content="summary_large_image">
 
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..600&display=swap">
-    <link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Jost:wght@400&display=swap">
+<link rel="stylesheet" href="style.css">
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Joel Oranen",
-        "jobTitle": "Data Engineer",
-        "worksFor": { "@type": "Organization", "name": "Cloud2" },
-        "url": "https://jtnoranen.github.io/",
-        "image": "https://jtnoranen.github.io/img/joel-oranen.jpg",
-        "email": "mailto:joel.oranen@gmail.com",
-        "sameAs": [
-            "https://www.linkedin.com/in/joeloranen/",
-            "https://github.com/jtnOranen"
-        ]
-    }
-    </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Joel Oranen",
+  "jobTitle": "Data Engineer",
+  "worksFor": { "@type": "Organization", "name": "Cloud2" },
+  "url": "https://jtnoranen.github.io/",
+  "email": "mailto:joel.oranen@gmail.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/joeloranen/",
+    "https://github.com/jtnOranen"
+  ]
+}
+</script>
 </head>
-
 <body>
-    <!-- Each section is one panel; the links scroll the row of panels sideways. -->
-    <main class="paneelit">
-        <section class="paneeli" id="home" aria-labelledby="nimi">
-            <div class="paneeli__sisus etusivu">
-                <h1 id="nimi">Joel Oranen</h1>
-                <p class="etusivu__rooli">Data engineer</p>
+<div class="root" id="root">
+  <main class="scene"><div class="sway"><div class="cube" id="cube">
 
-                <div class="kuva">
-                    <video class="kuva__video" width="480" height="360" autoplay muted loop playsinline
-                        poster="img/joel-vilkuttaa.jpg" aria-label="Joel Oranen waving at the camera.">
-                        <source src="img/joel-vilkuttaa.webm" type="video/webm">
-                        <source src="img/joel-vilkuttaa.mp4" type="video/mp4">
-                    </video>
-                    <img class="kuva__still" src="img/joel-vilkuttaa.jpg" width="480" height="360"
-                        alt="Joel Oranen waving at the camera.">
-                    <!-- Paper with a torn hole lies over the video. -->
-                    <svg class="kuva__repeama" viewBox="0 0 120 90" aria-hidden="true" focusable="false">
-                        <defs>
-                            <filter id="karhea" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
-                                <feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="4" seed="3" result="kohina"/>
-                                <feDisplacementMap in="SourceGraphic" in2="kohina" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
-                            </filter>
-                            <filter id="kuitu" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
-                                <feTurbulence type="fractalNoise" baseFrequency="0.25" numOctaves="3" seed="5" result="kohina"/>
-                                <feDisplacementMap in="SourceGraphic" in2="kohina" scale="3" xChannelSelector="R" yChannelSelector="G"/>
-                            </filter>
-                            <filter id="varjo" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
-                                <feGaussianBlur stdDeviation="1.2"/>
-                            </filter>
-                            <path id="reika" d="M109.7 45.0 L108.2 46.1 L107.6 47.1 L110.4 48.4 L110.6 49.6 L106.9 50.3 L106.4 51.3 L106.9 52.5 L110.1 54.1 L111.9 55.7 L110.2 56.6 L105.6 56.6 L104.8 57.6 L104.8 58.7 L101.7 58.9 L102.5 60.3 L100.0 60.5 L101.1 62.1 L98.9 62.4 L99.1 63.6 L102.1 66.3 L99.1 66.1 L96.3 65.9 L96.5 67.3 L96.8 68.8 L94.1 68.4 L93.6 69.4 L90.5 68.6 L89.0 68.7 L88.7 69.9 L86.5 69.4 L85.4 69.9 L85.1 71.0 L83.3 70.7 L82.2 71.1 L82.0 72.6 L82.1 74.4 L82.5 77.0 L81.4 77.6 L80.3 78.3 L79.9 80.1 L78.5 80.6 L78.2 82.9 L75.4 80.3 L74.2 80.9 L72.9 81.5 L71.6 81.9 L70.9 84.4 L69.4 84.3 L67.8 84.0 L66.1 82.8 L64.7 83.1 L63.3 83.5 L61.9 83.3 L60.5 84.1 L59.0 81.7 L57.6 82.6 L56.2 82.1 L54.7 83.6 L53.2 84.0 L51.4 85.8 L49.6 86.6 L48.6 84.5 L47.4 83.4 L45.6 84.3 L44.2 83.7 L42.4 84.4 L41.4 82.9 L40.6 81.4 L39.0 81.3 L38.0 80.4 L36.5 80.1 L35.4 79.5 L33.8 79.3 L33.0 78.1 L31.9 77.4 L31.2 76.3 L30.4 75.3 L29.8 74.2 L27.8 74.3 L26.6 73.8 L25.9 72.7 L25.8 71.3 L24.7 70.7 L23.0 70.4 L20.6 70.6 L19.0 70.2 L18.1 69.3 L17.0 68.5 L16.8 67.2 L16.9 65.8 L16.0 64.9 L17.5 63.0 L17.5 61.9 L17.0 60.9 L15.0 60.5 L14.4 59.5 L13.5 58.6 L14.0 57.3 L11.3 56.9 L11.4 55.8 L10.8 54.7 L9.4 53.9 L8.5 52.9 L7.3 51.9 L10.0 50.4 L10.1 49.3 L12.2 48.1 L9.1 47.2 L8.6 46.1 L8.6 45.0 L7.6 43.9 L7.0 42.7 L6.2 41.5 L9.2 40.6 L8.8 39.4 L9.7 38.4 L10.5 37.4 L11.1 36.4 L11.6 35.4 L13.2 34.7 L11.6 33.2 L13.5 32.5 L13.0 31.2 L13.8 30.3 L14.5 29.4 L13.9 27.9 L12.9 26.3 L16.8 26.7 L18.4 26.2 L20.5 26.0 L20.4 24.7 L21.3 23.9 L21.1 22.5 L20.5 20.8 L20.7 19.5 L22.1 18.9 L22.2 17.5 L23.2 16.6 L24.1 15.7 L24.8 14.6 L27.2 15.1 L27.8 13.8 L27.9 12.1 L27.4 9.5 L30.7 11.2 L34.3 13.5 L36.1 13.9 L37.7 13.9 L39.0 13.7 L40.1 13.2 L40.7 11.7 L42.5 12.4 L43.4 11.4 L44.3 10.2 L45.4 9.4 L47.4 11.0 L48.5 10.2 L50.2 11.6 L51.4 11.1 L52.6 10.8 L53.8 10.1 L55.0 9.0 L56.2 7.2 L57.6 7.8 L59.0 7.1 L60.4 6.6 L61.8 7.1 L63.3 6.9 L64.3 9.3 L65.3 11.5 L66.6 11.4 L67.4 13.3 L68.4 14.0 L70.5 11.4 L72.2 10.5 L72.9 12.2 L75.1 10.3 L76.7 10.1 L78.5 9.6 L80.1 9.5 L81.4 9.9 L83.4 9.5 L84.8 9.8 L87.0 9.3 L88.0 10.3 L89.8 10.3 L91.8 10.3 L93.0 11.1 L95.0 11.1 L96.6 11.6 L97.5 12.7 L98.8 13.5 L99.7 14.5 L98.8 16.9 L98.9 18.4 L99.6 19.4 L99.6 20.9 L99.4 22.4 L100.6 23.1 L103.3 23.1 L105.2 23.6 L106.5 24.4 L107.8 25.2 L107.8 26.5 L107.3 28.0 L108.8 28.8 L108.9 30.1 L107.6 31.7 L109.3 32.4 L108.8 33.8 L107.6 35.2 L109.9 35.9 L110.4 37.0 L109.8 38.2 L109.3 39.4 L109.2 40.6 L108.3 41.7 L109.9 42.8 L108.9 43.9Z"/>
-                        </defs>
-                        <use class="kuva__varjo" href="#reika" transform="translate(0.6 1)" filter="url(#varjo)"/>
-                        <path class="kuva__kuitu" fill-rule="evenodd" filter="url(#kuitu)"
-                            d="M-20 -20H140V110H-20Z M109.7 45.0 L108.2 46.1 L107.6 47.1 L110.4 48.4 L110.6 49.6 L106.9 50.3 L106.4 51.3 L106.9 52.5 L110.1 54.1 L111.9 55.7 L110.2 56.6 L105.6 56.6 L104.8 57.6 L104.8 58.7 L101.7 58.9 L102.5 60.3 L100.0 60.5 L101.1 62.1 L98.9 62.4 L99.1 63.6 L102.1 66.3 L99.1 66.1 L96.3 65.9 L96.5 67.3 L96.8 68.8 L94.1 68.4 L93.6 69.4 L90.5 68.6 L89.0 68.7 L88.7 69.9 L86.5 69.4 L85.4 69.9 L85.1 71.0 L83.3 70.7 L82.2 71.1 L82.0 72.6 L82.1 74.4 L82.5 77.0 L81.4 77.6 L80.3 78.3 L79.9 80.1 L78.5 80.6 L78.2 82.9 L75.4 80.3 L74.2 80.9 L72.9 81.5 L71.6 81.9 L70.9 84.4 L69.4 84.3 L67.8 84.0 L66.1 82.8 L64.7 83.1 L63.3 83.5 L61.9 83.3 L60.5 84.1 L59.0 81.7 L57.6 82.6 L56.2 82.1 L54.7 83.6 L53.2 84.0 L51.4 85.8 L49.6 86.6 L48.6 84.5 L47.4 83.4 L45.6 84.3 L44.2 83.7 L42.4 84.4 L41.4 82.9 L40.6 81.4 L39.0 81.3 L38.0 80.4 L36.5 80.1 L35.4 79.5 L33.8 79.3 L33.0 78.1 L31.9 77.4 L31.2 76.3 L30.4 75.3 L29.8 74.2 L27.8 74.3 L26.6 73.8 L25.9 72.7 L25.8 71.3 L24.7 70.7 L23.0 70.4 L20.6 70.6 L19.0 70.2 L18.1 69.3 L17.0 68.5 L16.8 67.2 L16.9 65.8 L16.0 64.9 L17.5 63.0 L17.5 61.9 L17.0 60.9 L15.0 60.5 L14.4 59.5 L13.5 58.6 L14.0 57.3 L11.3 56.9 L11.4 55.8 L10.8 54.7 L9.4 53.9 L8.5 52.9 L7.3 51.9 L10.0 50.4 L10.1 49.3 L12.2 48.1 L9.1 47.2 L8.6 46.1 L8.6 45.0 L7.6 43.9 L7.0 42.7 L6.2 41.5 L9.2 40.6 L8.8 39.4 L9.7 38.4 L10.5 37.4 L11.1 36.4 L11.6 35.4 L13.2 34.7 L11.6 33.2 L13.5 32.5 L13.0 31.2 L13.8 30.3 L14.5 29.4 L13.9 27.9 L12.9 26.3 L16.8 26.7 L18.4 26.2 L20.5 26.0 L20.4 24.7 L21.3 23.9 L21.1 22.5 L20.5 20.8 L20.7 19.5 L22.1 18.9 L22.2 17.5 L23.2 16.6 L24.1 15.7 L24.8 14.6 L27.2 15.1 L27.8 13.8 L27.9 12.1 L27.4 9.5 L30.7 11.2 L34.3 13.5 L36.1 13.9 L37.7 13.9 L39.0 13.7 L40.1 13.2 L40.7 11.7 L42.5 12.4 L43.4 11.4 L44.3 10.2 L45.4 9.4 L47.4 11.0 L48.5 10.2 L50.2 11.6 L51.4 11.1 L52.6 10.8 L53.8 10.1 L55.0 9.0 L56.2 7.2 L57.6 7.8 L59.0 7.1 L60.4 6.6 L61.8 7.1 L63.3 6.9 L64.3 9.3 L65.3 11.5 L66.6 11.4 L67.4 13.3 L68.4 14.0 L70.5 11.4 L72.2 10.5 L72.9 12.2 L75.1 10.3 L76.7 10.1 L78.5 9.6 L80.1 9.5 L81.4 9.9 L83.4 9.5 L84.8 9.8 L87.0 9.3 L88.0 10.3 L89.8 10.3 L91.8 10.3 L93.0 11.1 L95.0 11.1 L96.6 11.6 L97.5 12.7 L98.8 13.5 L99.7 14.5 L98.8 16.9 L98.9 18.4 L99.6 19.4 L99.6 20.9 L99.4 22.4 L100.6 23.1 L103.3 23.1 L105.2 23.6 L106.5 24.4 L107.8 25.2 L107.8 26.5 L107.3 28.0 L108.8 28.8 L108.9 30.1 L107.6 31.7 L109.3 32.4 L108.8 33.8 L107.6 35.2 L109.9 35.9 L110.4 37.0 L109.8 38.2 L109.3 39.4 L109.2 40.6 L108.3 41.7 L109.9 42.8 L108.9 43.9Z"/>
-                        <path class="kuva__paperi" fill-rule="evenodd" filter="url(#karhea)"
-                            d="M-20 -20H140V110H-20Z M111.7 45.0 L111.1 46.1 L111.1 47.3 L113.9 48.6 L113.0 49.8 L109.6 50.6 L109.2 51.7 L110.2 53.0 L113.1 54.7 L115.3 56.4 L113.8 57.4 L110.1 57.8 L108.2 58.5 L107.6 59.6 L105.6 60.2 L105.7 61.4 L104.3 62.1 L104.9 63.6 L104.5 64.8 L105.7 66.6 L107.8 69.1 L104.5 68.9 L101.1 68.5 L99.5 69.0 L98.3 69.7 L96.7 70.1 L96.2 71.2 L94.2 71.3 L92.8 71.8 L92.1 72.7 L90.5 73.0 L89.6 73.8 L89.1 75.0 L87.8 75.5 L86.8 76.2 L86.0 77.3 L85.1 78.3 L84.4 79.6 L82.9 79.9 L81.6 80.3 L80.6 81.5 L79.7 82.7 L79.3 85.2 L76.9 83.6 L75.5 84.0 L74.1 84.6 L72.6 84.8 L71.4 85.9 L69.9 86.3 L68.4 86.8 L66.8 86.5 L65.2 86.7 L63.7 86.8 L62.1 86.7 L60.6 87.1 L59.0 86.1 L57.5 86.7 L55.9 86.6 L54.3 87.4 L52.7 87.4 L51.0 87.9 L49.4 87.8 L47.9 87.1 L46.4 86.7 L44.7 86.9 L43.3 86.1 L41.8 85.6 L40.5 84.9 L39.1 84.3 L37.5 84.1 L36.2 83.4 L34.8 82.8 L33.6 82.0 L32.2 81.5 L31.2 80.5 L30.0 79.7 L29.0 78.7 L28.2 77.6 L27.6 76.4 L26.4 75.7 L25.6 74.7 L24.4 74.0 L23.5 73.1 L22.3 72.4 L20.9 71.9 L19.3 71.5 L17.6 71.0 L16.4 70.3 L15.5 69.3 L14.6 68.4 L13.5 67.5 L12.0 66.8 L11.8 65.5 L11.1 64.5 L10.3 63.4 L8.9 62.6 L8.2 61.5 L7.4 60.5 L7.3 59.2 L5.6 58.4 L5.5 57.1 L5.4 55.8 L5.2 54.6 L5.6 53.3 L5.0 52.2 L5.5 50.9 L4.9 49.8 L5.6 48.5 L4.1 47.4 L3.9 46.2 L4.1 45.0 L3.7 43.8 L3.3 42.5 L2.7 41.3 L4.0 40.1 L3.6 38.9 L4.3 37.7 L5.1 36.6 L6.0 35.5 L6.9 34.5 L8.3 33.6 L7.9 32.2 L9.2 31.3 L9.2 30.1 L9.9 29.0 L10.9 28.1 L11.5 27.0 L12.0 25.9 L13.8 25.4 L14.6 24.4 L15.8 23.7 L16.3 22.5 L17.5 21.8 L18.2 20.8 L18.8 19.7 L19.6 18.8 L20.4 17.7 L20.8 16.4 L21.7 15.5 L22.8 14.7 L23.8 13.7 L25.6 13.6 L26.6 12.6 L26.6 10.7 L26.6 8.5 L30.0 10.2 L32.6 11.3 L33.9 10.9 L35.2 10.3 L36.5 9.7 L37.8 9.3 L39.0 8.6 L40.9 9.1 L42.3 8.9 L43.6 8.6 L45.0 8.2 L46.6 8.8 L47.9 8.1 L49.4 8.5 L50.6 7.9 L52.0 7.6 L53.4 7.1 L54.7 6.6 L56.1 5.7 L57.6 6.0 L59.0 5.7 L60.5 5.5 L61.9 5.8 L63.4 5.5 L64.8 6.4 L66.1 7.0 L67.7 6.4 L69.0 6.9 L70.6 6.7 L72.8 4.6 L74.5 4.5 L75.3 6.5 L77.0 6.3 L78.4 6.7 L80.0 6.9 L81.5 7.1 L83.0 7.5 L84.7 7.5 L86.2 8.0 L87.9 8.1 L89.3 8.7 L91.4 8.5 L93.5 8.5 L95.1 9.0 L96.9 9.3 L98.4 10.0 L99.4 11.1 L100.7 12.0 L102.0 12.9 L102.3 14.4 L103.3 15.5 L104.4 16.4 L105.0 17.7 L105.3 19.1 L105.9 20.3 L107.2 21.2 L108.0 22.3 L108.5 23.5 L109.2 24.6 L109.6 25.9 L109.6 27.2 L110.5 28.3 L110.7 29.5 L110.3 30.9 L111.5 31.9 L111.5 33.1 L111.0 34.5 L112.1 35.5 L112.5 36.7 L113.0 37.8 L113.4 39.0 L113.7 40.2 L113.1 41.4 L113.3 42.6 L112.0 43.8Z"/>
-                    </svg>
-                </div>
+    <section class="f f1 on" id="side-1" aria-label="Joel Oranen"><div class="sharp col">
+      <div>Joel Oranen</div>
+      <div class="pane">
+        <video class="pane__video" width="480" height="360" autoplay muted loop playsinline
+          poster="img/joel-vilkuttaa.jpg" aria-label="Joel Oranen waving at the camera.">
+          <source src="img/joel-vilkuttaa.webm" type="video/webm">
+          <source src="img/joel-vilkuttaa.mp4" type="video/mp4">
+        </video>
+        <img class="pane__still" src="img/joel-vilkuttaa.jpg" width="480" height="360" alt="Joel Oranen waving at the camera.">
+      </div>
+      <div class="mid">
+        <h1 class="disp">I build data pipelines people can trust.</h1>
+        <p class="soft" style="margin-top:24px;max-width:440px">Data engineer at Cloud2, with a background in business and futures studies. I love to be curious, and tech offers endless problems and tools to figure the world out.</p>
+      </div>
+    </div></section>
 
-                <nav aria-label="Main">
-                    <ul class="linkit">
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#cv">CV</a></li>
-                    </ul>
-                </nav>
-                <ul class="linkit linkit--hiljainen">
-                    <li><a href="mailto:joel.oranen@gmail.com">Email</a></li>
-                    <li><a href="https://www.linkedin.com/in/joeloranen/">LinkedIn</a></li>
-                    <li><a href="https://github.com/jtnOranen">GitHub</a></li>
-                </ul>
-            </div>
-        </section>
+    <section class="f f2" id="side-2" aria-label="Projects">
+      <div class="sharp col" id="list">
+        <div>
+          <h2 class="ques"><button type="button" class="plain" id="enter-q">How do wind and weather show up in Finland’s day-ahead electricity price?</button></h2>
+          <p class="note">Energy data platform, 2026. Built on Azure and Databricks, fed by three open APIs. Wind explains up to two fifths of the price variation. <a href="https://github.com/jtnOranen/energy-data-platform">Source on GitHub</a></p>
+          <p style="margin-top:8px"><button type="button" class="plain link" id="enter-more">Read more about this project</button></p>
+        </div>
+        <div>
+          <h2 class="ques">What futures do the church members of Jätkäsaari hope for in 2040?</h2>
+          <p class="note">Master’s thesis, 2023. <cite>Pioneering spirit and village community of the future.</cite> A workshop with members of the Jätkäsaari parish on desirable futures for the district, and the trends that support or threaten them. <a href="https://www.utupub.fi/handle/10024/174286">Read the thesis</a></p>
+        </div>
+        <div>
+          <h2 class="ques">How will people live and move in the cities of the future?</h2>
+          <p class="note">Foresight projects at KONE, 2022 to 2024. Interviews and analysis for Future of Living, and Future of Mobility and Mobility Hubs, and a foresight playbook for the strategy and innovation teams.</p>
+        </div>
+      </div>
+    </section>
 
-        <section class="paneeli" id="projects" aria-labelledby="projects-otsikko">
-            <nav class="ylapalkki" aria-label="Sections">
-                <ul class="linkit">
-                    <li><a href="#home">me</a></li>
-                    <li><a href="#projects" aria-current="location">projects</a></li>
-                    <li><a href="#experience">experience</a></li>
-                    <li><a href="#cv">cv</a></li>
-                </ul>
-            </nav>
-            <div class="paneeli__sisus">
-                <h2 id="projects-otsikko" class="piilotettu">Projects</h2>
+    <section class="f f3" id="side-3" aria-label="Experience"><div class="sharp">
+      <div class="two">
+        <div>
+          <h2 class="lbl">Work</h2>
+          <details class="job" open><summary><span class="row"><span class="soft">2026 to now</span><span>Data engineer, Cloud2</span></span></summary>
+            <p class="jd">Day to day, I build data platforms and pipelines in the cloud for enterprise clients.</p>
+            <p class="jd">A Finnish healthcare company needed an AI governance framework aligned with the EU AI Act, so I designed one: its principles, roles and operating model, user guidelines and the documents around them.</p>
+            <p class="jd">Alongside client work, I maintain Cloud2’s internal reporting and build new reports on the company’s leadership data.</p></details>
+          <details class="job"><summary><span class="row"><span class="soft">2024 to 2026</span><span>Data engineer, Skillio</span></span></summary>
+            <p class="jd">For the learners in Skillio’s training programme, I built an AI teaching assistant.</p>
+            <p class="jd">To feed it, I converted internal text data into usable formats, collected material from public web sources, and modelled and visualised the company’s databases, with pipelines in Python and reporting on Google Cloud.</p></details>
+          <details class="job"><summary><span class="row"><span class="soft">2022 to 2024</span><span>Foresight specialist, KONE</span></span></summary>
+            <p class="jd">For KONE’s strategy and innovation teams, I developed the foresight process and wrote a foresight playbook.</p>
+            <p class="jd">My work also included interviewing experts, maintaining the foresight platform and hosting the quarterly Foresight Friday.</p></details>
+        </div>
+        <div>
+          <h2 class="lbl">Education</h2>
+          <details class="job"><summary><span class="row"><span class="soft">2020 to 2023</span><span>Master of Social Sciences, <span class="soft">University of Turku</span></span></span></summary>
+            <p class="jd">Futures studies, with responsible business as a minor. I focused on strategic foresight.</p></details>
+          <details class="job"><summary><span class="row"><span class="soft">2015 to 2020</span><span>Bachelor of Business Administration, <span class="soft">Tampere University</span></span></span></summary>
+            <p class="jd">Leadership and management, minoring in responsible business.</p></details>
+          <details class="job"><summary><span class="row"><span class="soft">2024</span><span>Data engineer training programme, <span class="soft">Skillio</span></span></span></summary>
+            <p class="jd">Azure, Python, SQL and databases, and building ETL pipelines with Python and Azure tools.</p></details>
+          <h2 class="lbl">Certifications</h2>
+          <div class="job"><div class="soft">2026</div><div>Fabric Data Engineer Associate, <span class="soft">Microsoft</span></div></div>
+          <div class="job"><div class="soft">2025</div><div>Power BI Data Analyst Associate, <span class="soft">Microsoft</span></div></div>
+        </div>
+      </div>
+    </div></section>
 
-                <h3>Data</h3>
-                <ul class="rivit">
-                    <li>
-                        <p class="rivit__otsikko"><a href="https://github.com/jtnOranen/energy-data-platform">Energy data platform</a>
-                            <span class="rivit__aika">2026</span></p>
-                        <p>How do wind power and weather show up in the Finnish day-ahead electricity price? To find
-                            out, I built an end-to-end data platform on Azure and Databricks: ingestion from three open
-                            APIs, lakehouse layers, dbt models and infrastructure as code. Wind explains up to two
-                            fifths of the variation in the price. Built with Terraform, Azure, Databricks, dbt and
-                            GitHub Actions.</p>
-                    </li>
-                </ul>
+    <section class="table" id="table" aria-label="Energy data platform">
+      <div class="inner" id="inner">
+        <div class="txt" id="txt">
+        <div class="g g0"><button type="button" class="plain link" id="leave">Back to projects</button></div>
+        <div class="g g1">
+          <p class="pq">How do wind and weather show up in Finland’s day-ahead electricity price?</p>
+          <p class="pa">Wind explains up to two fifths of the price variation.</p>
+        </div>
+        <div class="g g2">
+          <p class="pt">An end-to-end data platform on Azure and Databricks. Azure Functions fetch three open APIs every hour (Fingrid, ENTSO-E and the Finnish Meteorological Institute) into a landing zone. Auto Loader brings the data into a Unity Catalog lakehouse, and dbt models it into a tested star schema. Every resource is in Terraform, and GitHub Actions deploys it with OIDC instead of secrets.</p>
+          <p class="pt soft">The data covers every quarter-hour since January 2024. Each extra gigawatt of wind lowers the price by 12 to 17&nbsp;€/MWh. Prices go negative 5% of the time, mostly on windy summer nights, and the most expensive quarter-hours are cold, calm weekday mornings when Finland imports.</p>
+        </div>
+        <div class="g g3">
+          <p class="pt soft">It ran on Azure from 20 October to 3 November 2026 for about 9&nbsp;€ a month, and then I took it down so it costs nothing. The next step would have been a price forecast on top of the gold layer.</p>
+          <p class="pt links" style="margin-top:4px"><a href="https://github.com/jtnOranen/energy-data-platform">Source on GitHub</a><a href="https://jtnoranen.github.io/energy-data-platform/">Models and tests</a></p>
+        </div>
+        </div>
+        <div class="sheets" id="sheets">
+          <button type="button" class="sheet sa front"><img src="img/energy/wind-and-price.webp" width="640" height="360" alt="Chart: the more wind power, the lower the day-ahead price, for 2024, 2025 and 2026."></button>
+          <button type="button" class="sheet sb"><img src="img/energy/price-drop-per-gw.webp" width="640" height="223" alt="Chart: each extra gigawatt of wind lowers the price by 12 to 17 euros per megawatt hour, by year."></button>
+          <button type="button" class="sheet sc"><img src="img/energy/pipeline-runs.webp" width="640" height="183" alt="Pipeline health dashboard: daily job runs by result."></button>
+        </div>
+      </div>
+    </section>
 
-                <h3>Research and foresight</h3>
-                <ul class="rivit">
-                    <li>
-                        <p class="rivit__otsikko"><a href="https://www.utupub.fi/handle/10024/174286">Master’s thesis</a>
-                            <span class="rivit__aika">2023</span></p>
-                        <p><cite>Pioneering spirit and village community of the future: Images of the future of church
-                                members of Jätkäsaari in the year 2040.</cite> I ran a workshop for members of the
-                            Jätkäsaari parish where we sketched desirable futures for the district and the trends that
-                            support or threaten them.</p>
-                    </li>
-                    <li>
-                        <p class="rivit__otsikko">Foresight projects at KONE <span class="rivit__aika">2022–2024</span></p>
-                        <p>Interviews and analysis for the Future of Living and Future of Mobility and Mobility Hubs
-                            projects, and a foresight playbook for the strategy and innovation teams that introduces
-                            the key methods of futures research from a business point of view.</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
+  </div></div></main>
 
-        <section class="paneeli" id="experience" aria-labelledby="experience-otsikko">
-            <nav class="ylapalkki" aria-label="Sections">
-                <ul class="linkit">
-                    <li><a href="#home">me</a></li>
-                    <li><a href="#projects">projects</a></li>
-                    <li><a href="#experience" aria-current="location">experience</a></li>
-                    <li><a href="#cv">cv</a></li>
-                </ul>
-            </nav>
-            <div class="paneeli__sisus">
-                <h2 id="experience-otsikko" class="piilotettu">Experience</h2>
+  <nav class="tabs" id="tabs" aria-label="Sides of the structure">
+    <button type="button" class="tab" data-side="0" aria-current="true">Joel Oranen</button>
+    <button type="button" class="tab" data-side="1" aria-current="false">Projects</button>
+    <button type="button" class="tab" data-side="2" aria-current="false">Experience</button>
+  </nav>
+  <p class="contact"><a href="mailto:joel.oranen@gmail.com">Email</a><a href="https://www.linkedin.com/in/joeloranen/">LinkedIn</a><a href="https://github.com/jtnOranen">GitHub</a><a href="cv_English.pdf" download>CV (en)</a><a href="cv_Suomi.pdf" hreflang="fi" download>CV (fi)</a></p>
+</div>
 
-                <h3>Work</h3>
-                <ul class="rivit">
-                    <li>
-                        <details open>
-                            <summary class="rivit__otsikko">Data Engineer, Cloud2 <span class="rivit__aika">2026–now</span></summary>
-                            <p>I build data platforms and pipelines in the cloud for enterprise clients.</p>
-                        </details>
-                    </li>
-                    <li>
-                        <details>
-                            <summary class="rivit__otsikko">Data Engineer, Skillio <span class="rivit__aika">2024–2026</span></summary>
-                            <p>I worked on an AI teaching assistant for the learners in Skillio’s training programme:
-                                converting internal text data into usable formats, collecting extra material from public
-                                web sources, and modelling and visualising the company’s databases. I built data pipelines
-                                in Python and reporting on Google Cloud.</p>
-                        </details>
-                    </li>
-                    <li>
-                        <details>
-                            <summary class="rivit__otsikko">Foresight Specialist, KONE <span class="rivit__aika">2022–2024</span></summary>
-                            <p>I developed the company’s foresight process and wrote a foresight playbook for the strategy
-                                and innovation teams. I interviewed experts and analysed material in foresight projects,
-                                maintained the foresight platform and hosted the quarterly Foresight Friday.</p>
-                        </details>
-                    </li>
-                    <li>
-                        <details>
-                            <summary class="rivit__otsikko">Foresight Trainee, Futures Platform <span class="rivit__aika">2021</span></summary>
-                            <p>I wrote descriptions of future phenomena and trends and helped run client workshops.</p>
-                        </details>
-                    </li>
-                </ul>
+<script>
+(function () {
+  'use strict';
+  var root = document.getElementById('root');
+  var cube = document.getElementById('cube');
+  var sides = [1, 2, 3].map(function (n) { return document.getElementById('side-' + n); });
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var inner = document.getElementById('inner');
+  var sheets = Array.prototype.slice.call(document.querySelectorAll('.sheet'));
+  var video = document.querySelector('.f1 .sharp .pane__video');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (video && reduce.matches) video.pause();
+  var HASH = ['', 'projects', 'experience'];
+  // Old addresses of the site still lead somewhere sensible.
+  var ALIAS = { home: 0, me: 0, questions: 0, background: 2, cv: 2 };
 
-                <details>
-                    <summary>Other work</summary>
-                    <ul class="rivit">
-                        <li>
-                            <p class="rivit__otsikko">Customer service, Posti <span class="rivit__aika">2021–2022</span></p>
-                            <p>Customer service and sales in central Helsinki, on the front line for feedback, good
-                                and bad.</p>
-                        </li>
-                        <li>
-                            <p class="rivit__otsikko">Sales representative, Nordic Sales Crew <span class="rivit__aika">2021</span></p>
-                            <p>ASICS product specialist in a sports store.</p>
-                        </li>
-                        <li>
-                            <p class="rivit__otsikko">Library assistant, University of Helsinki Library</p>
-                            <p>Civilian service: customer service, shelving, organising and keeping the customer
-                                database up to date.</p>
-                        </li>
-                    </ul>
-                </details>
+  // A pre-blurred copy of each side, shown when the side is not in front.
+  function makeGhost(s) {
+    var sharp = s.querySelector('.sharp');
+    var old = s.querySelector('.ghost');
+    var ghost = sharp.cloneNode(true);
+    ghost.className = sharp.className.replace('sharp', 'ghost');
+    ghost.removeAttribute('id');
+    Array.prototype.forEach.call(ghost.querySelectorAll('[id]'), function (n) { n.removeAttribute('id'); });
+    ghost.setAttribute('aria-hidden', 'true');
+    ghost.setAttribute('inert', '');
+    // The ghost gets a pre-blurred still instead of a second playing video.
+    Array.prototype.forEach.call(ghost.querySelectorAll('.pane'), function (p) {
+      p.innerHTML = '<img class="pane__fog" src="img/joel-vilkuttaa-sumu.png" width="200" height="150" alt="">';
+    });
+    if (old) { s.replaceChild(ghost, old); } else { s.appendChild(ghost); }
+  }
+  sides.forEach(makeGhost);
+  // Opening a row on the experience side changes its layout, so the ghost follows.
+  document.addEventListener('toggle', function (e) {
+    var s = e.target.closest && e.target.closest('.f');
+    if (s && !e.target.closest('.ghost')) makeGhost(s);
+  }, true);
 
-                <details>
-                    <summary>Character-building work</summary>
-                    <ul class="rivit">
-                        <li><p><span class="rivit__otsikko">Christmas tree seller, Havunen.</span> Sleet in a
-                            supermarket car park built character. Cheerful seasonal customers and a supportive team
-                            kept the energy up.</p></li>
-                        <li><p><span class="rivit__otsikko">Night newspaper carrier, Posti.</span> I delivered Helsingin
-                            Sanomat through the East Helsinki night. Physical work taught me a lot about persistence
-                            and the value of cardio.</p></li>
-                        <li><p><span class="rivit__otsikko">Face-to-face fundraiser, Finnish Red Cross.</span> When the
-                            success rate is statistically low, you learn patience and to take failure
-                            constructively.</p></li>
-                    </ul>
-                </details>
+  var turn = 0;        // thirds of a turn, unbounded
+  var inside = false;  // on the project table
+  var drag = 0;        // degrees while dragging
+  var zoomTimer = 0;
 
-                <h3>Education</h3>
-                <ul class="rivit">
-                    <li>
-                        <details>
-                            <summary class="rivit__otsikko">Data engineer training programme, Skillio <span class="rivit__aika">2024</span></summary>
-                            <p>Azure, Python, SQL and databases, and building ETL pipelines with Python and Azure tools.</p>
-                        </details>
-                    </li>
-                    <li>
-                        <details>
-                            <summary class="rivit__otsikko">Master of Social Sciences, University of Turku <span class="rivit__aika">2020–2023</span></summary>
-                            <p>Futures studies, with responsible business as a minor. I focused on strategic foresight.</p>
-                        </details>
-                    </li>
-                    <li>
-                        <details>
-                            <summary class="rivit__otsikko">Bachelor of Business Administration, Tampere University <span class="rivit__aika">2015–2020</span></summary>
-                            <p>Business administration, focus on leadership and management, minoring in responsible business.</p>
-                        </details>
-                    </li>
-                </ul>
-            </div>
-        </section>
+  function cur() { return ((turn % 3) + 3) % 3; }
 
-        <section class="paneeli" id="cv" aria-labelledby="cv-otsikko">
-            <nav class="ylapalkki" aria-label="Sections">
-                <ul class="linkit">
-                    <li><a href="#home">me</a></li>
-                    <li><a href="#projects">projects</a></li>
-                    <li><a href="#experience">experience</a></li>
-                    <li><a href="#cv" aria-current="location">cv</a></li>
-                </ul>
-            </nav>
-            <div class="paneeli__sisus">
-                <h2 id="cv-otsikko" class="piilotettu">CV</h2>
-                <p><a href="cv_English.pdf">English</a> or <a href="cv_Suomi.pdf" hreflang="fi">Finnish</a></p>
-            </div>
-        </section>
-    </main>
+  function setInert(el, on) {
+    if (on) { el.setAttribute('inert', ''); } else { el.removeAttribute('inert'); }
+  }
 
-    <script>
-        // A vertical mouse wheel cannot scroll the row of panels sideways, so when the current
-        // panel has nothing left to scroll, the wheel moves to the next or previous panel.
-        // Arrow keys do the same. Without this script the links and swiping still work.
-        (function () {
-            var rivi = document.querySelector(".paneelit");
-            var paneelit = rivi.querySelectorAll(".paneeli");
-            // One wheel gesture is a run of events less than 250 ms apart. A gesture can change
-            // the panel once, and not at all if it scrolled the panel itself first.
-            var edellinen = 0;
-            var sisalla = false;
-            var kaytetty = false;
-            var kertyma = 0;
+  function paint() {
+    var z = inside ? '0px' : 'calc(var(--a) * -1)';
+    var ax = inside ? -78 : 0;
+    var deg = Math.round((-(turn * 120) + drag) * 100) / 100;
+    cube.style.transform = 'translateZ(' + z + ') rotateX(' + ax + 'deg) rotateY(' + deg + 'deg)';
+  }
 
-            function nykyinen() {
-                return Math.round(rivi.scrollLeft / rivi.clientWidth);
-            }
+  function render() {
+    var c = cur();
+    paint();
+    root.classList.toggle('inside', inside);
+    sides.forEach(function (s, i) {
+      s.classList.toggle('on', i === c);
+      setInert(s.querySelector('.sharp'), i !== c || (inside && i === 1));
+    });
+    tabs.forEach(function (t, i) { t.setAttribute('aria-current', i === c ? 'true' : 'false'); });
+    setInert(inner, !inside);
+    // The video plays only while its side is in front.
+    if (video && !reduce.matches) {
+      if (c === 0) { var pr = video.play(); if (pr && pr.catch) pr.catch(function () {}); } else { video.pause(); }
+    }
+  }
 
-            function siirry(suunta) {
-                var i = Math.min(Math.max(nykyinen() + suunta, 0), paneelit.length - 1);
-                if (i === nykyinen()) return;
-                rivi.scrollTo({ left: i * rivi.clientWidth });
-                history.replaceState(null, "", "#" + paneelit[i].id);
-            }
+  function syncHash() {
+    var want = inside ? 'energy' : HASH[cur()];
+    var have = location.hash.replace('#', '');
+    if (want === have) return;
+    try {
+      if (want) { location.hash = want; }
+      else { history.pushState(null, '', location.pathname + location.search); }
+    } catch (e) {}
+  }
 
-            rivi.addEventListener("wheel", function (e) {
-                if (e.ctrlKey || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
-                var nyt = Date.now();
-                if (nyt - edellinen > 250) {
-                    sisalla = false;
-                    kaytetty = false;
-                    kertyma = 0;
-                }
-                edellinen = nyt;
-                if (kaytetty) {
-                    e.preventDefault();
-                    return;
-                }
-                var paneeli = paneelit[nykyinen()];
-                var alas = e.deltaY > 0;
-                var tilaa = alas
-                    ? paneeli.scrollTop + paneeli.clientHeight < paneeli.scrollHeight - 1
-                    : paneeli.scrollTop > 0;
-                if (tilaa) {
-                    sisalla = true;
-                    return;
-                }
-                e.preventDefault();
-                if (sisalla) return;
-                kertyma += e.deltaY;
-                if (Math.abs(kertyma) < 40) return;
-                kaytetty = true;
-                siirry(alas ? 1 : -1);
-            }, { passive: false });
+  function zoomFor(ms) {
+    root.classList.add('zoom');
+    clearTimeout(zoomTimer);
+    zoomTimer = setTimeout(function () { root.classList.remove('zoom'); }, ms);
+  }
 
-            document.addEventListener("keydown", function (e) {
-                if (e.altKey || e.ctrlKey || e.metaKey) return;
-                if (e.key === "ArrowRight") siirry(1);
-                if (e.key === "ArrowLeft") siirry(-1);
-            });
-        })();
-    </script>
+  function goTo(target, opts) {
+    var diff = target - cur();
+    if (diff > 1) diff -= 3;
+    if (diff < -1) diff += 3;
+    if (inside) { unzoom(); inside = false; zoomFor(2000); }
+    turn += diff;
+    render();
+    if (!opts || !opts.silent) syncHash();
+  }
+
+  function roll(d) {
+    turn += d; render(); syncHash();
+  }
+
+  function enter(opts) {
+    if (inside) return;
+    if (cur() !== 1) { turn += (1 - cur()); }
+    inside = true;
+    zoomFor(2000);
+    render();
+    if (!opts || !opts.silent) syncHash();
+    if (!opts || !opts.noFocus) document.getElementById('leave').focus({ preventScroll: true });
+  }
+
+  function leave(opts) {
+    if (!inside) return;
+    unzoom();
+    var hadFocus = inner.contains(document.activeElement);
+    inside = false;
+    zoomFor(2000);
+    render();
+    if (!opts || !opts.silent) syncHash();
+    if (hadFocus) document.getElementById('enter-q').focus({ preventScroll: true });
+  }
+
+  function fromHash() {
+    var h = location.hash.replace('#', '');
+    if (h === 'energy') { enter({ silent: true, noFocus: true }); return; }
+    var i = h in ALIAS ? ALIAS[h] : HASH.indexOf(h);
+    if (i < 0) i = 0;
+    goTo(i, { silent: true });
+  }
+
+  // Names at the bottom
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () { goTo(Number(t.getAttribute('data-side'))); });
+  });
+
+  // Arrow keys roll the structure; on the tabs, focus follows to the new tab.
+  document.addEventListener('keydown', function (e) {
+    if (inside || e.altKey || e.ctrlKey || e.metaKey) return;
+    var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+    if (!d) return;
+    e.preventDefault();
+    var onTab = e.target.closest && e.target.closest('#tabs');
+    roll(d);
+    if (onTab) tabs[cur()].focus({ preventScroll: true });
+  });
+
+  // The mouse wheel rolls the structure too, once per wheel gesture (events less than 250 ms
+  // apart). A side with room left to scroll scrolls first, and a gesture that scrolled it
+  // does not roll.
+  var wheelLast = 0, wheelUsed = false, wheelScrolled = false, wheelSum = 0;
+  root.addEventListener('wheel', function (e) {
+    if (e.ctrlKey || inside) return;
+    var now = Date.now();
+    if (now - wheelLast > 250) { wheelUsed = false; wheelScrolled = false; wheelSum = 0; }
+    wheelLast = now;
+    var horiz = Math.abs(e.deltaX) > Math.abs(e.deltaY);
+    var delta = horiz ? e.deltaX : e.deltaY;
+    if (!horiz) {
+      var s = sides[cur()].querySelector('.sharp');
+      var room = delta > 0 ? s.scrollTop + s.clientHeight < s.scrollHeight - 1 : s.scrollTop > 0;
+      if (room) { wheelScrolled = true; return; }
+    }
+    e.preventDefault();
+    if (wheelUsed || wheelScrolled) return;
+    wheelSum += delta;
+    if (Math.abs(wheelSum) < 40) return;
+    wheelUsed = true;
+    roll(wheelSum > 0 ? 1 : -1);
+  }, { passive: false });
+
+  // Into and out of the project
+  document.getElementById('enter-q').addEventListener('click', function () { enter(); });
+  document.getElementById('enter-more').addEventListener('click', function () { enter(); });
+  document.getElementById('leave').addEventListener('click', function () { leave(); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape' || !inside) return;
+    e.preventDefault();
+    if (zoomed) { unzoom(); } else { leave(); }
+  });
+  root.addEventListener('click', function (e) {
+    if (!inside) return;
+    if (zoomed && !e.target.closest('.sheet')) { unzoom(); return; }
+    if (e.target.closest('a, button, .g')) return;
+    leave();
+  });
+
+  // Picture sheets: a click brings a sheet to the front and zooms it to fill the table;
+  // another click, Escape or a click elsewhere puts it back.
+  var zoomed = null;
+  var sheetBox = document.getElementById('sheets');
+  function unzoom() {
+    if (!zoomed) return;
+    zoomed.style.transform = '';
+    zoomed.classList.remove('zoomed');
+    zoomed.setAttribute('aria-pressed', 'false');
+    root.classList.remove('pic');
+    zoomed = null;
+  }
+  function zoomIn(s) {
+    var iw = inner.clientWidth, ih = inner.clientHeight;
+    // Sheets are laid out at full size and scaled from their top left corner.
+    var w = s.offsetWidth, h = s.offsetHeight;
+    var k = Math.min(1, iw * 0.96 / w, ih * 0.92 / h);
+    var x = (iw - w * k) / 2 - (sheetBox.offsetLeft + s.offsetLeft) + inner.scrollLeft;
+    var y = (ih - h * k) / 2 - (sheetBox.offsetTop + s.offsetTop) + inner.scrollTop;
+    s.style.transform = 'translate(' + Math.round(x) + 'px,' + Math.round(y) + 'px) translateZ(40px) scale(' + k.toFixed(3) + ')';
+    s.classList.add('zoomed');
+    s.setAttribute('aria-pressed', 'true');
+    root.classList.add('pic');
+    zoomed = s;
+  }
+  sheets.forEach(function (s) {
+    s.setAttribute('aria-pressed', 'false');
+    s.addEventListener('click', function () {
+      if (zoomed === s) { unzoom(); return; }
+      unzoom();
+      sheets.forEach(function (o) { o.classList.toggle('front', o === s); });
+      zoomIn(s);
+    });
+  });
+  window.addEventListener('resize', unzoom);
+
+  // Drag or swipe to roll
+  var start = null, dragging = false, swallow = false, swallowTimer = 0, raf = 0;
+  function armSwallow() {
+    swallow = true; clearTimeout(swallowTimer);
+    swallowTimer = setTimeout(function () { swallow = false; }, 80);
+  }
+  function stageWidth() { return Math.max(240, cube.offsetWidth || 600); }
+  function endDrag(commit) {
+    if (!start) return;
+    var was = dragging, d = drag;
+    start = null; dragging = false; drag = 0;
+    if (!was) return;
+    root.classList.remove('dragging');
+    if (commit && Math.abs(d) > 14) turn += (d < 0 ? 1 : -1);
+    render(); syncHash();
+    if (commit) armSwallow();
+  }
+  root.addEventListener('pointerdown', function (e) {
+    if (dragging) return;
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    swallow = false;
+    start = { x: e.clientX, y: e.clientY, id: e.pointerId };
+  });
+  root.addEventListener('pointermove', function (e) {
+    if (!start || e.pointerId !== start.id) return;
+    if (e.pointerType === 'mouse' && (e.buttons & 1) === 0) { endDrag(false); return; }
+    var dx = e.clientX - start.x, dy = e.clientY - start.y;
+    if (inside) {
+      if (e.pointerType !== 'mouse' && Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5) { start = null; armSwallow(); leave(); }
+      return;
+    }
+    if (!dragging) {
+      if (Math.abs(dx) <= 8 || Math.abs(dx) <= Math.abs(dy)) return;
+      dragging = true;
+      root.classList.add('dragging');
+      try { root.setPointerCapture(e.pointerId); } catch (err) {}
+    }
+    var d = dx * 90 / stageWidth() * 1.5;
+    drag = Math.max(-100, Math.min(100, d));
+    if (!raf) raf = requestAnimationFrame(function () { raf = 0; if (dragging) paint(); });
+  });
+  root.addEventListener('pointerup', function (e) { if (start && e.pointerId === start.id) endDrag(true); });
+  root.addEventListener('pointercancel', function (e) { if (start && e.pointerId === start.id) endDrag(false); });
+  root.addEventListener('click', function (e) {
+    if (!swallow) return;
+    swallow = false; e.preventDefault(); e.stopPropagation();
+  }, true);
+  root.addEventListener('dragstart', function (e) { e.preventDefault(); });
+
+  window.addEventListener('hashchange', fromHash);
+  // First paint without animation
+  cube.style.transition = 'none';
+  render();
+  if (location.hash) fromHash();
+  requestAnimationFrame(function () { requestAnimationFrame(function () { cube.style.transition = ''; }); });
+})();
+</script>
 </body>
-
 </html>
